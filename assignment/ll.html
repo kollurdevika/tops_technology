@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wellness Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    .header {
+      background-color: burlywood;
+      padding: 30px 40px;
+      text-align: center;
+    }
+
+    .header h1 {
+      color: white;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: burlywood;
+      align-items: center;
+      border-top:2px solid white;
+      border-bottom: 2px solid white;
+      border-left: none;
+      border-right: none;
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+      gap: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      text-align: center;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      align-items: center;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons img {
+      height: 21px;
+      width: 21px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .text {
+      font-size: 30px;
+      font-family: monospace;
+      font-weight: 300;
+      color: #7d6a5f;
+    }
+
+    .text .bold {
+      font-weight: bold;
+      color:#3c2f24;
+      font-size: 50px;
+      font-style: italic;
+
+
+    }
+
+    .text .italic {
+      font-style: italic;
+      color: #a68d7b;
+    }
+    .description {
+      
+      color: #999;
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 14px;
+      line-height: 1.6;
+
+    }
+
+    .read-more {
+      display: inline-block;
+      padding: 10px 25px;
+      border: 1px solid #3c2f24;
+      border-radius: 25px;
+      background: transparent;
+      color: #3c2f24;
+      font-style: italic;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    
+    .top {
+      background-color: whitesmoke;
+      display: inline-block;
+      margin: 0.0px;
+      border: 1px solid blue;
+      height: 400px;
+      width: 800px;
+      border-top-left-radius: 500px;
+      border-top-right-radius: 500px;
+      align-items: center;
+      padding: 5px;
+      justify-content: center;
+     justify-items:center ;
+     position: absolute;
+     left: 300px;
+     top: 1400px;
+     font-size: 60%;
+
+    }
+
+    .product {
+      background-color: burlywood;
+      height: 500px;
+      width: 100%;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1><b>WellnessX</b></h1>
+  </div>
+
+  <div class="navbar">
+    <div class="nav-links menu" >
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">About</a>
+      <a href="#">Service</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/" target="_blank">
+        <img src="C:\Users\lenovo\OneDrive\Desktop\wellness_files\assets\facebook.jpg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank">
+        <img src="C:\Users\lenovo\OneDrive\Desktop\wellness_files\assets\insta.jpg" alt="Instagram">
+      </a>
+      <a href="https://twitter.com/login?" target="_blank">
+        <img src=C:\Users\lenovo\OneDrive\Desktop\wellness_files\assets\twitter.png alt="Twitter">
+      </a>
+    </div>
+  </div>
+
+  <div>
+
+    <img src="C:\Users\lenovo\OneDrive\Desktop\wellness_files\assets\hand3.png" height="450" width="100%" style="background-color: burlywood;">
+  </div> <br><br>
+
+  <div  class="text">
+   <h2 align="center" style="font-style: italic;"> What we do</h2>
+   <br>
+   
+   <h2  align="center" style="font-style:italic;">Let's Do </style><span class="bold"> Prevention</span><span class="italic"> Rather Then  </span> <span class="bold">Treating</span></h2>
+
+   <div class="description" align="center" style="font-style:italic;">
+       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.  volutpat.    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+   </div>
+
+    <div align="center">
+      <a  href="#"  class="read-more">Read more</a>
+    </div>
+
+
+    
+      <img src="C:\Users\lenovo\OneDrive\Desktop\wellness_files\assets\pan2.png" height="700" width="75%">
+     <div class="top">
+       <svg viewBox="0 0 600 600">
+      <defs>
+        <path id="circlePath" d="M450,230 m-300,0 a200,200 5 1,1 400,0 a200,200 0 1,1 -400,0" />
+      </defs>
+      <text>
+        <textPath href="#circlePath" startOffset="40%" text-anchor="middle">
+          THE PERFECT WELLNESS BASKET
+        </textPath>
+      </text>
+    </svg>
+     <img src="C:\Users\lenovo\OneDrive\Desktop\wellness_files\assets\products.png" height="350px" width="100%">
+     </div>
+
+
+     <div class="product">
+
+     </div>
+
+</div>
+
+
+  
+
+</body>
+</html>
