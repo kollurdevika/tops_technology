@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+        }
+        .row1 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-1 { width: 8.33%; }
+        .col-2 { width: 16.66%; }
+        .col-3 { width: 25%; }
+        .col-4 { width: 33.33%; }
+        .col-5 { width: 41.66%; }
+        .col-6 { width: 50%; }
+        .col-7 { width: 58.33%; }
+        .col-8 { width: 66.66%; }
+        .col-9 { width: 75%; }
+        .col-10 { width: 83.33%; }
+        .col-11 { width: 91.66%; }
+        .col-12 { width: 100%; }
+
+        .heading {
+            background-color: black;
+            font-size: 16px;
+            color: white;
+            padding: 10px;
+        }
+
+        .head-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .head-content1 {
+            font-size: font-size24px;
+            margin: 0;
+        }
+
+         .search-bar select,
+        .search-bar input[type="button"] 
+        .search-bar input[type="text"]{
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+           
+        }
+        .search-bar input[type="button"]{
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+           
+        }
+
+
+        .links {
+
+            background-color:navy;
+            color: white;
+            font-size: 15px;
+            height: auto;
+            display: flex;
+            padding: 10px;
+            margin: 0px;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+           
+        }
+
+        .links a {
+            color: white;
+            margin-right: 60px;
+
+        }
+
+        .sidebar {
+            background-color: darkgray;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .mainbar {
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        .photo {
+            padding: 10px;
+            border: solid 2px black;
+            margin: 10px;
+            border-width: 2px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .photo img {
+            width: 100%;
+        }
+
+        h1, h2, h4, p {
+            margin: 5px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .footer {
+            background-color:darkblue;
+            height: auto;
+            color: white;
+        }
+        .footer a {
+            color: white;
+
+
+
+        }
+    </style>
+</head>
+<body>
+       <div class="row">
+    <div class="heading col-12  head-content">
+        <h1><b>Amazon.in</b></h1>
+        <div class="search-bar head-content1" style="display: inline;">
+            <select>
+                <option>All Categories</option>
+                 <option>Alexa Skills</option>
+                  <option>Amazon Devices</option>
+                   <option>Amazon Fashion</option>
+                    <option>Amazon Pharmacy</option>
+                     <option>Appliances</option>
+                      <option>Apps & Games</option>
+                       <option>Audible Audiobooks</option>
+                        <option>baby toys</option>
+                         <option>Beauty</option>
+                          <option>Books</option>
+                           <option>CAr & Motorbike</option>
+                            <option>Clothing & Accessories</option>
+                             <option>Collectibles</option>
+                              <option>Computers & Accessories</option>
+                               <option>Deals</option>
+                                <option>Electronics</option>
+                                 <option>Furniture</option>
+                                  <option>Garden & Outdoors</option>
+                                   <option>Gift Cards</option> 
+                        
+            </select>
+            <input type="text" placeholder="Search electronics...">
+            <input type="button" value="Search">
+        </div>
+    </div>
+  </div>
+       <div class="row">
+        <div class="col-12 links">
+          <div class="links"> 
+            <a href="https://www.amazon.in/minitv?ref_=nav_avod_desktop_topnav">MX Player</a>
+            <a href="https://www.amazon.in/b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3"> Sell</a>
+            <a href="https://www.amazon.in/gp/bestsellers/?ref_=nav_cs_bestsellers">Bestsellers</a>
+            <a href="https://www.amazon.in/mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles">Mobiles</a>
+            <a href="https://www.amazon.in/deals?ref_=nav_cs_gb">Today's Deals</a>
+            <a href="https://www.amazon.in/gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help">Customer Service</a>
+            <a href="https://www.amazon.in/gp/browse.html?node=6648217031&ref_=nav_cs_fashion">Fashion</a>
+            <a href="https://www.amazon.in/gp/new-releases/?ref_=nav_cs_newreleases">New Releases</a>
+            <a href="https://www.amazon.in/gp/sva/dashboard?ref_=nav_cs_apay">Amazon Pay</a>
+           <a href="C:\Users\lenovo\OneDrive\Documents\login.html"  >Login/SignUp </a>
+
+          </div>
+
+    </div>
+   </div>
+    <div class="row">
+        <div class="col-2 sidebar">
+            <h2>Categories</h2>
+            <dt>Computers & Accessories</dt><br>
+            <a href="https://www.amazon.in/s?rh=n%3A976392031%2Cn%3A1375248031&dc&qid=1749188258&rnid=976392031&ref=sr_nr_n_1">Accessories & Peripherals</a><br><br>
+            <a href="https://www.amazon.in/s?rh=n%3A976392031%2Cn%3A1375344031&dc&qid=1749188258&rnid=976392031&ref=sr_nr_n_2">Components</a><br><br>
+            <a href="https://www.amazon.in/s?rh=n%3A976392031%2Cn%3A1375392031&dc&qid=1749188258&rnid=976392031&ref=sr_nr_n_3">Desktop</a><br><br>
+            <a href="https://www.amazon.in/s?rh=n%3A976392031%2Cn%3A1375393031&dc&qid=1749188258&rnid=976392031&ref=sr_nr_n_4">External Devices & Data Storage</a><br><br>
+            <a href="https://www.amazon.in/s?rh=n%3A976392031%2Cn%3A1375424031&dc&qid=1749188258&rnid=976392031&ref=sr_nr_n_5">Laptop</a><br><br>
+            <a href="https://www.amazon.in/s?rh=n%3A976392031%2Cn%3A1375425031&dc&qid=1749188258&rnid=976392031&ref=sr_nr_n_6">Monitors</a><br><br>
+            <a href="https://www.amazon.in/s?rh=n%3A976392031%2Cn%3A1375427031&dc&qid=1749188258&rnid=976392031&ref=sr_nr_n_7">Networking Devices</a><br><br>
+            <a href="https://www.amazon.in/s?rh=n%3A976392031%2Cn%3A14784019031&dc&qid=1749188258&rnid=976392031&ref=sr_nr_n_8">Printers, inks & Accessories</a><br><br>
+            <a href="https://www.amazon.in/s?rh=n%3A976392031%2Cn%3A1375452031&dc&qid=1749188258&rnid=976392031&ref=sr_nr_n_9">Scanners</a><br><br>
+            <a href="https://www.amazon.in/s?rh=n%3A976392031%2Cn%3A1375458031&dc&qid=1749188258&rnid=976392031&ref=sr_nr_n_10">Tables</a><br><br>
+
+            <h2>Item Condition</h2><br>
+            <a href="#">New</a><br>
+            <a href="#">Renewed</a><br><br>
+            <h2>Price</h2><br>
+            <a href="#">Under ₹1,000</a><br><br>
+            <a href="#">₹1,000 - ₹5,000</a><br><br>
+            <a href="#">₹5,000 - ₹10,000</a><br><br>
+            <a href="#">₹10,000 - ₹20,000</a><br><br>
+            <a href="#">Over ₹20,000</a><br><br>
+            <h2>Deals & Discounts</h2><br>
+            <a href="#">All Discounts</a><br><br>
+            <a href="#">Today's Deals</a><br><br>
+            <h3>Made for Amazon Brands</h3><br>
+            <a href="#">Made for Amazon</a><br><br>
+            <h2>Seller</h2><br>
+            <a href="#">Cocoblu Retail</a><br><br>
+            <a href="#">Clicktech Retail Private Ltd</a><br><br>
+            <a href="#">TheGiftKart</a><br><br>
+            <a href="#">Clicktech Business</a><br><br>
+            <a href="#">Spigen India</a><br><br>
+            <a href="#">DIZORO</a><br><br>
+            <a href="#">KARWAN</a><br><br>
+            <h2>New Arrivals</h2><br>
+            <a href="#">Last 30 days</a><br><br>
+            <a href="#">Last 90 days</a><br><br>
+            <h2>Availability</h2><br>
+            <a href="#">Include Out of Stock</a><br><br>
+            <h2>Discount</h2><br>
+            <a href="#">10% Off or more</a><br><br>
+            <a href="#">25% Off or more</a><br><br>
+            <a href="#">35% Off or more</a><br><br>
+            <a href="#">50% Off or more</a><br><br>
+            <a href="#">60% Off or more</a><br><br>
+            <a href="#">70% Off or more</a><br><br>
+            <a href="#">Pay On Delivery</a><br><br>
+            <a href="#">Eligible for Pay On Delivery</a><br><br>
+        </div>
+
+        <div class="col-8 mainbar">
+            <h1 style="font-style: italic;">PC Accessories & Gaming Accessories</h1>
+            <img src="C:/top_technology/website/images/am1.png" alt="Main Banner" width="100%">
+
+            <div class="row">
+                <div class="col-4 photo">
+                    <img src="C:/top_technology/website/images/pro1.jpg" alt="Product 1">
+                    <p>Corsair Katar Pro Ultra-Light Optical USB Gaming Mouse with Backlit RGB LED, 12400 DPI (Black)</p>
+                    <h3>₹1,399.00</h3>
+                    <h4 style="text-decoration:line-through;">₹2,400.00</h4>
+                </div>
+
+                <div class="col-4 photo">
+                    <img src="C:/top_technology/website/images/pro2.jpg" alt="Product 2">
+                    <p>Razer Huntsman Mini - Mercury Edition - 60% Optical Gaming Keyboard (Clicky Purple Switch)</p>
+                    <h3>₹7,002.00</h3>
+                    <h4 style="text-decoration:line-through;">₹15,999.00</h4>
+                </div>
+
+                <div class="col-4 photo">
+                    <img src="C:/top_technology/website/images/pro3.jpg" alt="Product 3">
+                    <p>Corsair Katar Pro Ultra-Light Optical USB Gaming Mouse with Backlit RGB LED, 12400 DPI (Black)</p>
+                    <h3>₹1,399.00</h3>
+                    <h4 style="text-decoration:line-through;">₹2,400.00</h4>
+                </div>
+
+                <div class="col-4 photo">
+                    <img src="C:/top_technology/website/images/pro4.jpg" alt="Product 4">
+                    <p>Razer Huntsman Mini - Mercury Edition - 60% Optical Gaming Keyboard (Clicky Purple Switch)</p>
+                    <h3>₹7,002.00</h3>
+                    <h4 style="text-decoration:line-through;">₹15,999.00</h4>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-8 mainbar">
+                    <img src="C:/top_technology/website/images/banner1.png" width="150%">
+                </div>
+            </div>
+
+            <h1>Trending Now...</h1>
+            <div class="row">
+                    <div class="col-4 photo">
+                    <a href="https://www.amazon.in/dp/B0F2FTC64C/ref=QAHzEditorial_en_IN_1?pf_rd_r=3FWCRT251QTADPAGRY02&pf_rd_p=e579b4bf-efad-4087-b298-90536459625c&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-29&pf_rd_t=&pf_rd_i=1389401031&ie=UTF8&ref_=MiviC1">
+                <img src="C:\top_technology\website\images\link1.jpg" width="100%">
+                    </a>  
+                </div>
+
+                 <div class="col-4 photo">
+                    <a href="https://www.amazon.in/dp/B0F8BL3MNT/ref=QAHzEditorial_en_IN_2?pf_rd_r=3FWCRT251QTADPAGRY02&pf_rd_p=e579b4bf-efad-4087-b298-90536459625c&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-29&pf_rd_t=&pf_rd_i=1389401031">
+                <img src="C:\top_technology\website\images\link2.jpg" width="100%">
+                    </a>
+                 </div>
+            
+             <div class="col-4 photo">
+              <a href="https://www.amazon.in/b/ref=QAHzEditorial_en_IN_3?pf_rd_r=3FWCRT251QTADPAGRY02&pf_rd_p=e579b4bf-efad-4087-b298-90536459625c&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-29&pf_rd_t=&pf_rd_i=1389401031&node=207504675031">
+                <img src="C:\top_technology\website\images\link3.jpg" width="100%">
+              </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3 photo">
+                  <img src="C:\top_technology\website\images\pro8.jpg">
+                 </div>
+                  <div class="col-3 photo">
+                  <img src="C:\top_technology\website\images\pro9.jpg">
+                 </div>
+                  <div class="col-3 photo">
+                  <img src="C:\top_technology\website\images\pro10.png">
+                 </div>
+                  <div class="col-3 photo">
+                  <img src="C:\top_technology\website\images\pro11.png">
+                 </div>
+                
+            </div>
+
+             <div class="row">
+
+            <div class="col-3 photo">
+
+                <a href="https://www.amazon.in/Nothing-Storage-Dimensity-Processor-Display/dp/B0DC8F2X6T?pf_rd_p=e40307b2-fbf4-4ff3-b85f-cf2f9631bd1c&pf_rd_r=Y85ZS4N49RH912XD0ABD&ref_=Smartphones-S3P_B0DC8F2X6T">
+                <img src="C:\top_technology\website\images\p1.jpg">
+                </a>
+            </div> 
+
+            <div class="col-3 photo">
+                <a href="https://www.amazon.in/realme-Pro-Monet-Gold-128GB/dp/B0DBM2XQYF?pf_rd_p=e40307b2-fbf4-4ff3-b85f-cf2f9631bd1c&pf_rd_r=Y85ZS4N49RH912XD0ABD&ref_=Smartphones-S3P_B0DBM2XQYF">
+              <img src="C:\top_technology\website\images\p2.jpg">
+                </a>
+            </div> 
+
+            <div class="col-3 photo">
+                <a href="https://www.amazon.in/Nothing-Phone-Black-256GB-Storage/dp/B0DZNP6L5B?pf_rd_p=e40307b2-fbf4-4ff3-b85f-cf2f9631bd1c&pf_rd_r=Y85ZS4N49RH912XD0ABD&ref_=Smartphones-S3P_B0DZNP6L5B">
+                 <img src="C:\top_technology\website\images\p3.jpg">
+                </a>
+            </div> 
+
+            <div class="col-3 photo">
+                <a href="https://www.amazon.in/Nothing-Storage-Snapdragon-Charging-Expansion/dp/B0DZTMZL4X?pf_rd_p=e40307b2-fbf4-4ff3-b85f-cf2f9631bd1c&pf_rd_r=Y85ZS4N49RH912XD0ABD&ref_=Smartphones-S3P_B0DZTMZL4X">
+            <img src="C:\top_technology\website\images\p4.jpg">
+                </a>
+            </div> 
+
+            </div>
+
+        </div>
+
+        <div class="col-2 sidebar">
+            <h1> <a href="https://www.amazon.in/electronics/b/?ie=UTF8&node=976419031&ref_=topnav_storetab_top_elec_mega">Electronics</a></h1><br>
+            <a href="https://www.amazon.in/b/?_encoding=UTF8&node=1389401031&ref_=sv_top_elec_mega_1">Mobiles & Accessories</a><br><br>
+            <a href="https://www.amazon.in/b/?_encoding=UTF8&node=976392031&ref_=sv_top_elec_mega_2">Laptop & Accessories</a><br><br><br>
+            <a href="https://www.amazon.in/b/?_encoding=UTF8&node=1389375031&ref_=sv_top_elec_mega_3">TV & Home Entertainment</a><br><br><br>
+            <a href="https://www.amazon.in/b/?_encoding=UTF8&node=1389335031&ref_=sv_top_elec_mega_4">Audio</a><br><br><br>
+            <a href="https://www.amazon.in/b/?_encoding=UTF8&node=1388977031&ref_=sv_top_elec_mega_5">Cameras</a><br><br><br>
+            <a href="https://www.amazon.in/b/?_encoding=UTF8&node=1375248031&ref_=sv_top_elec_mega_6">Computers Peripherals</a><br><br><br>
+            <a href="https://www.amazon.in/b/?_encoding=UTF8&node=13773797031&ref_=sv_top_elec_mega_7">Smart Technology</a><br><br><br>
+            <a href="https://www.amazon.in/b/?_encoding=UTF8&node=3677697031&ref_=sv_top_elec_mega_8">Musical Instruments</a><br><br><br>
+            <a href="https://www.amazon.in/b/?_encoding=UTF8&node=2454172031&ref_=sv_top_elec_mega_9">Office & Stationery</a><br><br><br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4 footer">
+          <div class="foot-links">
+            <h2><b>Get to Know Us</b></h2><br>
+             <a href="https://www.aboutamazon.in/?utm_source=gateway&utm_medium=footer">Careers</a><br><br>
+              <a href="https://press.aboutamazon.in/?utm_source=gateway&utm_medium=footer">Press Releases</a><br><br>
+               <a href="https://www.amazon.science/">Amazon Science</a><br><br>
+          </div>
+        </div>
+
+
+        <div class="col-4 footer">
+             <div class="foot-links">
+             <h2><b>Connect with Us</b></h2><br>
+             <a href="https://www.amazon.in/gp/redirect.html/ref=footer_fb?location=http://www.facebook.com/AmazonIN&token=2075D5EAC7BB214089728E2183FD391706D41E94&6">Facebook</a><br><br>
+              <a href="https://www.amazon.in/gp/redirect.html/ref=footer_twitter?location=http://twitter.com/AmazonIN&token=A309DFBFCB1E37A808FF531934855DC817F130B6&6">Twitter</a><br><br>
+               <a href="https://www.amazon.in/gp/redirect.html?location=https://www.instagram.com/amazondotin&token=264882C912E9D005CB1D9B61F12E125D5DF9BFC7&source=standards">Instagram</a><br><br>
+
+             </div>
+        </div>
+
+
+        <div class="col-4 footer">
+             <div class="foot-links">
+                <h2><b>Make Money with Us</b></h2><br>
+                <a href="https://www.amazon.in/b/?node=2838698031&ld=AZINSOANavDesktopFooter_C&ref_=nav_footer_sell_C">Sell on Amazon</a><br><br>
+                <a href="https://accelerator.amazon.in/?ref_=map_1_b2b_GW_FT">Sell under Amazon Accelerator</a><br><br>
+                <a href="https://brandservices.amazon.in/?ref=AOINABRLGNRFOOT&ld=AOINABRLGNRFOOT">Protect and Build your Brand</a><br><br>
+                <a href="https://sell.amazon.in/grow-your-business/amazon-global-selling.html?ld=AZIN_Footer_V1&ref=AZIN_Footer_V1"> Amazon Global Selling</a><br><br>
+                <a href="https://supply.amazon.com/?ref_=footer_sta&lang=en-IN">SUpply to Amazon</a><br><br>
+                <a href="https://affiliate-program.amazon.in/?utm_campaign=assocshowcase&utm_medium=footer&utm_source=GW&ref_=footer_assoc">Become an Affiliate</a><br><br>
+                <a href="https://services.amazon.in/services/fulfilment-by-amazon/benefits.html/ref=az_footer_fba?ld=AWRGINFBAfooter">Fulfilment by Amazon</a><br><br>
+                <a href="https://advertising.amazon.in/?ref=Amz.in">Advertise your Products</a><br><br>
+                <a href="https://www.amazonpay.in/merchant">Amazon pay on Merchants</a><br><br>
+
+             </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
