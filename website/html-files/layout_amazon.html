@@ -15,6 +15,13 @@
             flex-wrap: wrap;
         }
 
+
+[class*="col-"] {
+    width:100%;
+}
+
+
+ @media only screen and ( min-width: 600px) {
         .col-1 { width: 8.33%; }
         .col-2 { width: 16.66%; }
         .col-3 { width: 25%; }
@@ -28,6 +35,8 @@
         .col-11 { width: 91.66%; }
         .col-12 { width: 100%; }
 
+
+}
         .heading {
             background-color: black;
             font-size: 16px;
@@ -42,7 +51,7 @@
         }
 
         .head-content1 {
-            font-size: font-size24px;
+            font-size:24px;
             margin: 0;
         }
 
@@ -132,7 +141,7 @@
 </head>
 <body>
        <div class="row">
-    <div class="heading col-12  head-content">
+    <div class="heading col-12 head-content">
         <h1><b>Amazon.in</b></h1>
         <div class="search-bar head-content1" style="display: inline;">
             <select>
@@ -164,7 +173,7 @@
     </div>
   </div>
        <div class="row">
-        <div class="col-12 links">
+        <div class="col-12 links"> 
           <div class="links"> 
             <a href="https://www.amazon.in/minitv?ref_=nav_avod_desktop_topnav">MX Player</a>
             <a href="https://www.amazon.in/b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3"> Sell</a>
@@ -270,7 +279,7 @@
 
             <div class="row">
 
-                <div class="col-8 mainbar">
+                <div class="col-8 col-s-12 mainbar">
                     <img src="C:/top_technology/website/images/banner1.png" width="150%">
                 </div>
             </div>
@@ -306,7 +315,7 @@
                   <div class="col-3 photo">
                   <img src="C:\top_technology\website\images\pro10.png">
                  </div>
-                  <div class="col-3 photo">
+                  <div class="col-6 photo">
                   <img src="C:\top_technology\website\images\pro11.png">
                  </div>
                 
@@ -401,3 +410,30 @@
 
 </body>
 </html>
+<section style="background-color: black; padding: 60px 40px;">
+  <div style="display: flex; flex-direction: column; gap: 30px;">
+
+    <!-- "NEW" Tag with Horizontal Line -->
+    <div style="display: flex; align-items: center;">
+      <div style="background-color: red; color: black; font-weight: bold; font-size: 28px; padding: 8px 18px;">NEW</div>
+      <div style="flex-grow: 1; height: 4px; background-color: red;"></div>
+    </div>
+
+    <!-- "ARRIVALS" and Button -->
+    <h1 style="color: white; font-size: 100px; font-weight: bold; margin: 0;">ARRIVALS</h1>
+    <a href="#" style="background-color: white; color: black; font-weight: bold; padding: 10px 20px; text-decoration: none; width: fit-content;">EXPLORE NOW</a>
+
+    <!-- Product Image Carousel -->
+    <div style="display: flex; gap: 40px; overflow-x: auto; padding-top: 30px;">
+      <img src="images/shoes17.jpg" alt="Nitro Football Studs" style="height: 400px; border-radius: 10px; transition: transform 0.3s;">
+      <img src="images/shoes18.jpg" alt="Power Strike 4.0 Badminton Shoes" style="height: 400px; border-radius: 10px; transition: transform 0.3s;">
+      <img src="images/shoes19.jpg" alt="Running Shoe" style="height: 400px; border-radius: 10px; transition: transform 0.3s;">
+    </div>
+
+  </div>
+</section>
+
+<section>
+    <div>
+        
+</section>
