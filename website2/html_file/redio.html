@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pure CSS Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      background-color: #f5f5f5;
+    }
+
+    .slider-wrapper {
+      display: flex;
+      width: 200%; /* 2 slides */
+      transition: transform 0.5s ease-in-out;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .slide {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 80px;
+    }
+
+    .text-content {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .text-content h2 {
+      font-size: 48px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .text-content h4 {
+      font-size: 22px;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .text-content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .image-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-content img {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    /* Navigation Buttons */
+    .nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .nav label {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin: 0 6px;
+      cursor: pointer;
+    }
+
+    #slide1:checked ~ .slider-wrapper {
+      transform: translateX(0%);
+    }
+
+    #slide2:checked ~ .slider-wrapper {
+      transform: translateX(-100%);
+    }
+
+    #slide1:checked ~ .nav label[for="slide1"],
+    #slide2:checked ~ .nav label[for="slide2"] {
+      background-color: #66bb6a;
+    }
+
+    @media (max-width: 768px) {
+      .slide {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .text-content {
+        padding: 0;
+      }
+
+      .image-content {
+        margin-top: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Radio Buttons for Slides -->
+  <input type="radio" name="slider" id="slide1" checked>
+  <input type="radio" name="slider" id="slide2">
+
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <div class="text-content">
+          <h2>Proident occaecat</h2>
+          <h4>Aliquip ex ea commodo consequat</h4>
+          <p>You are permitted to use this Zay CSS template for your commercial websites. You are <strong>not permitted</strong> to re-distribute the template ZIP file in any kind of template collection websites.</p>
+        </div>
+        <div class="image-content">
+          <img src="https://i.imgur.com/Ii9THX2.png" alt="Curology Product">
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="text-content">
+          <h2><span style="color:#66bb6a">Zay</span> eCommerce</h2>
+          <h4>Tiny and Perfect eCommerce Template</h4>
+          <p>Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 (beta 1). This template is 100% free provided by TemplateMo website. Image credits go to Freepik Stories, Unsplash and Icons 8.</p>
+        </div>
+        <div class="image-content">
+          <img src="https://i.imgur.com/8kIBzra.png" alt="Shoe Image">
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="nav">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+    </div>
+  </div>
+
+</body>
+</html>
