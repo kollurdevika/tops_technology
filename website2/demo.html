@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cash Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        padding: 20px;
+    }
+    .cash-slip {
+        max-width: 500px;
+        margin: auto;
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .cash-slip h2 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background: #eee;
+    }
+    input[type="number"] {
+        width: 60px;
+        padding: 5px;
+        text-align: center;
+    }
+    .total {
+        font-weight: bold;
+        font-size: 18px;
+        text-align: right;
+        padding: 10px 0;
+    }
+    img {
+        height: 25px;
+    }
+    .note-summary {
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="cash-slip">
+    <h2>Cash Calculator</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Note</th>
+                <th>Image</th>
+                <th>Qty</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody id="cashTable">
+        </tbody>
+    </table>
+    <div class="total">Total: ₹ <span id="totalAmount">0</span></div>
+    <div class="note-summary">Total Notes: <span id="totalNotes">0</span></div>
+    <div class="note-summary">Amount in Words: <span id="amountInWords">Zero</span></div>
+</div>
+
+<script>
+    const denominations = [
+        { value: 2000, img: "images/one.jpg" },
+        { value: 500, img: "images/two.jpg" },
+        { value: 200, img: "images/three.jpg" },
+        { value: 100, img: "images/four.jpg" },
+        { value: 50, img: "images/five.jpg" },
+        { value: 20, img: "images/six.jpg" },
+        { value: 10, img: "images/seven.jpg" },
+        { value: 5, img: "images/test.jpg" },
+        { value: 2, img: "images/nine.jpg" },
+        { value: 1, img: "images/ten.jpg" }
+    ];
+
+    const tableBody = document.getElementById("cashTable");
+
+    denominations.forEach(denom => {
+        let row = document.createElement("tr");
+        row.innerHTML = `
+            <td>₹${denom.value}</td>
+            <td><img src="${denom.img}" alt="Note"></td>
+            <td><input type="number" min="0" value="0" data-value="${denom.value}"></td>
+            <td>₹<span class="subtotal">0</span></td>
+        `;
+        tableBody.appendChild(row);
+    });
+
+    function numberToWords(num) {
+        if (num === 0) return "Zero";
+        const a = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", 
+                   "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+        const b = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+        
+        function inWords(n) {
+            if (n < 20) return a[n];
+            if (n < 100) return b[Math.floor(n / 10)] + (n % 10 ? " " + a[n % 10] : "");
+            if (n < 1000) return a[Math.floor(n / 100)] + " Hundred" + (n % 100 ? " " + inWords(n % 100) : "");
+            if (n < 100000) return inWords(Math.floor(n / 1000)) + " Thousand" + (n % 1000 ? " " + inWords(n % 1000) : "");
+            if (n < 10000000) return inWords(Math.floor(n / 100000)) + " Lakh" + (n % 100000 ? " " + inWords(n % 100000) : "");
+            return inWords(Math.floor(n / 10000000)) + " Crore" + (n % 10000000 ? " " + inWords(n % 10000000) : "");
+        }
+        return inWords(num);
+    }
+
+    tableBody.addEventListener("input", () => {
+        let total = 0;
+        let totalNotes = 0;
+
+        document.querySelectorAll("#cashTable tr").forEach(row => {
+            const qty = parseInt(row.querySelector("input").value) || 0;
+            const value = parseInt(row.querySelector("input").dataset.value);
+            const subtotal = qty * value;
+            row.querySelector(".subtotal").textContent = subtotal;
+            total += subtotal;
+            totalNotes += qty;
+        });
+
+        document.getElementById("totalAmount").textContent = total;
+        document.getElementById("totalNotes").textContent = totalNotes;
+        document.getElementById("amountInWords").textContent = numberToWords(total) + " Rupees";
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Content Section */
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .content, .sidebar {
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr; 
+      }
+
+      nav {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .content, .sidebar {
+        font-size: 16px;
+        padding: 15px;
+      }
+
+      footer {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        font-size: 14px;
+      }
+
+      .content, .sidebar {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="content">
+      <h2>Main Content</h2>
+      <p>
+        This is the main content area. On large screens, it appears beside the sidebar. 
+        On smaller screens, the layout stacks vertically for better readability.
+      </p>
+    </div>
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>
+        This is the sidebar section with related information, links, or ads. 
+        It will appear below the main content on smaller screens.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Responsive Webpage | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
