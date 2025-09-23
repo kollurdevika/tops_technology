@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - MediNest</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    .about-header {
+      padding: 60px 0;
+      text-align: center;
+    }
+    .about-header h2 {
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .breadcrumb-section {
+      background-color: #f8f9fa;
+      padding: 15px 0;
+      text-align:margin-left;
+    }
+    .about-content {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .about-content h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .about-content p {
+      font-size: 1.1rem;
+      color: #6c757d;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: auto;
+    }
+
+
+
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+      <a class="navbar-brand" href="#">
+        <h1 style="color:black">Medi<span style="color:white;">Nest</span></h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 5%;">
+        <ul class="navbar-nav" style="gap:10%;">
+          <li class="nav-item"><a class="nav-link" href="index.html"> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about_us.html"> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="Departments.html">Departments</a></li>
+          <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Doctors.html">Doctors</a></li>
+          <li class="nav-item"><a class="nav-link" href="Pages.html"> More Pages</a></li>
+          <li class="nav-item"><a class="nav-link" href="Dropdown.html"> Dropdown</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html"> Contact</a></li>
+        </ul>
+      </div>
+      <button type="button" class="btn btn-dark" style="margin-right:0%"><i class="bi bi-calendar-plus"></i> Appointment</button>
+    </div>
+  </nav>
+
+
+   <style>
+    .breadcrumb-bg {
+      background-color: #f8f9fa;
+    }
+    .filter-box {
+      background-color: #f0fafa;
+      border: 1px solid #d2eaea;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    .category-btn {
+      margin: 5px;
+      border-radius: 20px;
+      padding: 8px 20px;
+    }
+    .category-btn.active {
+      background-color: #009cae;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="text-center py-5">
+  <h2 class="fw-bold">Doctors</h2>
+  <p class="text-muted">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+</div>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb-bg py-2">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Doctors</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- Filter Box -->
+<div class="container my-5">
+  <div class="filter-box">
+    <form class="row g-3 align-items-end">
+      <!-- Search -->
+      <div class="col-md-4">
+        <label class="form-label fw-semibold">Search Doctors</label>
+        <input type="text" class="form-control" placeholder="Type a name or keyword">
+      </div>
+
+      <!-- Department -->
+      <div class="col-md-4">
+        <label class="form-label fw-semibold">Department</label>
+        <select class="form-select">
+          <option selected>All Departments</option>
+          <option>Cardiology</option>
+          <option>Pediatrics</option>
+          <option>Dermatology</option>
+          <option>Orthopedics</option>
+        </select>
+      </div>
+
+      <!-- Location -->
+      <div class="col-md-3">
+        <label class="form-label fw-semibold">Location</label>
+        <select class="form-select">
+          <option selected>All Locations</option>
+          <option>New York</option>
+          <option>California</option>
+          <option>Texas</option>
+        </select>
+      </div>
+
+      <!-- Button -->
+      <div class="col-md-1 d-grid">
+        <button type="submit" class="btn btn-info text-white">Apply Filters</button>
+      </div>
+    </form>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <style>
+    .filter-btns .btn {
+      border-radius: 20px;
+      margin: 5px;
+    }
+    .filter-btns .btn.active {
+      background-color: #009cae;
+      color: #fff;
+    }
+    .doctor-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .doctor-card:hover {
+      transform: translateY(-5px);
+    }
+    .doctor-image {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+    }
+    .doctor-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .badge-label {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: #009cae;
+      color: white;
+      font-size: 13px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+    .specialty-badge {
+      background-color: #e0f7f9;
+      color: #009cae;
+      font-size: 13px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+
+  <!-- Filter Buttons -->
+  <div class="text-center mb-4 filter-btns">
+    <button class="btn btn-outline-secondary active" data-filter="all">All</button>
+    <button class="btn btn-outline-secondary" data-filter="cardiology">Cardiology</button>
+    <button class="btn btn-outline-secondary" data-filter="pediatrics">Pediatrics</button>
+    <button class="btn btn-outline-secondary" data-filter="dermatology">Dermatology</button>
+    <button class="btn btn-outline-secondary" data-filter="orthopedics">Orthopedics</button>
+  </div>
+
+  <!-- Doctor Cards -->
+  <div class="row g-4" id="doctor-list">
+
+    <!-- Doctor: Cardiology -->
+    <div class="col-md-6 col-lg-3 doctor-item" data-category="cardiology">
+      <div class="doctor-card">
+        <div class="doctor-image">
+          <span class="badge-label">Senior Consultant</span>
+          <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-3.webp alt="Dr. Amelia Brooks">
+        </div>
+        <div class="p-3">
+          <h6 class="fw-bold mb-0">Dr. Amelia Brooks</h6>
+          <small class="text-muted">Cardiologist • MD, FACC</small>
+          <p class="mt-2 mb-2 text-muted">Nostrud tempor magna minim excepteur, id cillum laboris aute proident.</p>
+          <span class="specialty-badge">Cardiology</span>
+          <div class="d-flex justify-content-between mt-3">
+            <a href="#" class="btn btn-info text-white btn-sm">Book Appointment</a>
+            <a href="#" class="btn btn-outline-info btn-sm">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doctor: Pediatrics -->
+    <div class="col-md-6 col-lg-3 doctor-item" data-category="pediatrics">
+      <div class="doctor-card">
+        <div class="doctor-image">
+          <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-7.webp alt="Dr. Noah Turner">
+        </div>
+        <div class="p-3">
+          <h6 class="fw-bold mb-0">Dr. Noah Turner</h6>
+          <small class="text-muted">Pediatrician • DO</small>
+          <p class="mt-2 mb-2 text-muted">Quis irure pariatur sed eiusmod, elit laboris consequat cupidatat.</p>
+          <span class="specialty-badge">Pediatrics</span>
+          <div class="d-flex justify-content-between mt-3">
+            <a href="#" class="btn btn-info text-white btn-sm">Book Appointment</a>
+            <a href="#" class="btn btn-outline-info btn-sm">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doctor: Dermatology -->
+    <div class="col-md-6 col-lg-3 doctor-item" data-category="dermatology">
+      <div class="doctor-card">
+        <div class="doctor-image">
+          <span class="badge-label bg-primary">New</span>
+          <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-12.webp alt="Dr. Sofia Bennett">
+        </div>
+        <div class="p-3">
+          <h6 class="fw-bold mb-0">Dr. Sofia Bennett</h6>
+          <small class="text-muted">Dermatologist • MBBS, MD</small>
+          <p class="mt-2 mb-2 text-muted">Dolor commodo laboris lorem ad, amet consequat mollit deserunt.</p>
+          <span class="specialty-badge">Dermatology</span>
+          <div class="d-flex justify-content-between mt-3">
+            <a href="#" class="btn btn-info text-white btn-sm">Book Appointment</a>
+            <a href="#" class="btn btn-outline-info btn-sm">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doctor: Orthopedics -->
+    <div class="col-md-6 col-lg-3 doctor-item" data-category="orthopedics">
+      <div class="doctor-card">
+        <div class="doctor-image">
+          <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-5.webp alt="Dr. Ethan Cole">
+        </div>
+        <div class="p-3">
+          <h6 class="fw-bold mb-0">Dr. Ethan Cole</h6>
+          <small class="text-muted">Orthopedic Surgeon • MS, FRCS</small>
+          <p class="mt-2 mb-2 text-muted">Velit laborum minim laboris, eiusmod elit irure in exercitation.</p>
+          <span class="specialty-badge">Orthopedics</span>
+          <div class="d-flex justify-content-between mt-3">
+            <a href="#" class="btn btn-info text-white btn-sm">Book Appointment</a>
+            <a href="#" class="btn btn-outline-info btn-sm">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doctor Cards -->
+<div class="row g-4" id="doctor-list">
+
+  
+
+  <!-- Dr. Liam Carter - Orthopedics -->
+  <div class="col-md-6 col-lg-3 doctor-item" data-category="orthopedics">
+    <div class="doctor-card">
+      <div class="doctor-image">
+        <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-6.webp alt="Dr. Liam Carter">
+      </div>
+      <div class="p-3">
+        <h6 class="fw-bold mb-0">Dr. Liam Carter</h6>
+        <small class="text-muted">Sports Medicine • MD</small>
+        <p class="mt-2 mb-2 text-muted">Deserunt pariatur eiusmod duis, officia aute laboris consectetur.</p>
+        <span class="specialty-badge">Orthopedics</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn btn-info text-white btn-sm">Book Appointment</a>
+          <a href="#" class="btn btn-outline-info btn-sm">View Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dr. Maya Patel - Cardiology -->
+  <div class="col-md-6 col-lg-3 doctor-item" data-category="cardiology">
+    <div class="doctor-card">
+      <div class="doctor-image">
+        <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-10.webp alt="Dr. Maya Patel">
+      </div>
+      <div class="p-3">
+        <h6 class="fw-bold mb-0">Dr. Maya Patel</h6>
+        <small class="text-muted">Interventional Cardiologist • MD</small>
+        <p class="mt-2 mb-2 text-muted">Cupidatat fugiat sint enim laboris, sed do ut aliquip dolor.</p>
+        <span class="specialty-badge">Cardiology</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn btn-info text-white btn-sm">Book Appointment</a>
+          <a href="#" class="btn btn-outline-info btn-sm">View Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dr. Oliver Hayes - Pediatrics -->
+  <div class="col-md-6 col-lg-3 doctor-item" data-category="pediatrics">
+    <div class="doctor-card">
+      <div class="doctor-image">
+        <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-2.webp alt="Dr. Oliver Hayes">
+      </div>
+      <div class="p-3">
+        <h6 class="fw-bold mb-0">Dr. Oliver Hayes</h6>
+        <small class="text-muted">Pediatric Specialist • MD</small>
+        <p class="mt-2 mb-2 text-muted">Exercitation id ea nisi fugiat, ullamco veniam cillum nostrud.</p>
+        <span class="specialty-badge">Pediatrics</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn btn-info text-white btn-sm">Book Appointment</a>
+          <a href="#" class="btn btn-outline-info btn-sm">View Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dr. Harper James - Dermatology -->
+  <div class="col-md-6 col-lg-3 doctor-item" data-category="dermatology">
+    <div class="doctor-card">
+      <div class="doctor-image">
+        <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-9.webp alt="Dr. Harper James">
+      </div>
+      <div class="p-3">
+        <h6 class="fw-bold mb-0">Dr. Harper James</h6>
+        <small class="text-muted">Cosmetic Dermatologist • MD</small>
+        <p class="mt-2 mb-2 text-muted">Aliquip laborum aliqua voluptate commodo qui deserunt laboris.</p>
+        <span class="specialty-badge">Dermatology</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn btn-info text-white btn-sm">Book Appointment</a>
+          <a href="#" class="btn btn-outline-info btn-sm">View Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  </div>
+</div>
+
+<!-- JavaScript Filtering Logic -->
+<script>
+  const buttons = document.querySelectorAll(".filter-btns .btn");
+  const doctors = document.querySelectorAll(".doctor-item");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Update active state
+      buttons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const filter = button.getAttribute("data-filter");
+
+      doctors.forEach(doctor => {
+        const category = doctor.getAttribute("data-category");
+
+        if (filter === "all" || filter === category) {
+          doctor.style.display = "block";
+        } else {
+          doctor.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+    .badge-custom {
+      font-size: 0.75rem;
+      margin-right: 0.3rem;
+      background-color: #e9f5f8;
+      color: #0a9396;
+      font-weight: 500;
+    }
+    .thumb-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .thumb-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1);
+    }
+    .thumb-card img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .available-badge {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background-color: white;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #0a9396;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+<div class="container">
+
+  <!-- Profile Section -->
+  <div class="row g-4 bg-white p-4 rounded shadow-sm">
+    <!-- Left: Image -->
+    <div class="col-md-5 position-relative">
+      <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-7.webp alt="Dr. Natalia Rivera" class="img-fluid rounded">
+      <div class="available-badge d-flex align-items-center">
+        <span class="badge bg-success rounded-circle me-2" style="width:8px;height:8px;"></span>
+        Available this week
+      </div>
+    </div>
+
+    <!-- Right: Details -->
+    <div class="col-md-7">
+      <div class="mb-2">
+        <span class="badge badge-custom">Chief Surgeon</span>
+        <span class="badge badge-custom">12+ Years Experience</span>
+        <span class="badge badge-custom">Board Certified</span>
+      </div>
+      <h4 class="fw-bold">Dr. Natalia Rivera</h4>
+      <p class="text-muted mb-1">General Surgery &bull; MD, FACS</p>
+      <p class="text-muted">
+        Commodo incididunt aliqua minim, eiusmod in laboris nulla. Amet do occaecat quis, 
+        excepteur in magna do dolore incididunt. Tempor in aute ullamco, irure officia aliqua nostrud.
+      </p>
+
+      <ul class="list-unstyled text-muted small mb-4">
+        <li><i class="bi bi-hospital me-2 text-primary"></i>Residency: St. Mary’s Medical Center</li>
+        <li><i class="bi bi-mortarboard me-2 text-primary"></i>Fellowship: Advanced Laparoscopy</li>
+        <li><i class="bi bi-journal-text me-2 text-primary"></i>Publications: 14 peer-reviewed articles</li>
+      </ul>
+
+      <div class="d-flex gap-3">
+        <a href="#" class="btn btn-info text-white">
+          <i class="bi bi-calendar-check me-1"></i> Book Appointment
+        </a>
+        <a href="#" class="btn btn-outline-secondary">
+          <i class="bi bi-file-earmark-text me-1"></i> View CV
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thumbnail Carousel -->
+  <div class="row mt-5 g-4">
+    <div class="col-md-2">
+      <div class="bg-white p-3 text-center rounded thumb-card">
+        <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-1.webp alt="Dr. Oliver Hayes">
+        <div class="fw-semibold mt-2">Dr. Oliver Hayes</div>
+        <div class="text-muted small">Pediatrics</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="bg-white p-3 text-center rounded thumb-card">
+        <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-3.webp alt="Dr. Noah Turner">
+        <div class="fw-semibold mt-2">Dr. Noah Turner</div>
+        <div class="text-muted small">Pediatrics</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="bg-white p-3 text-center rounded thumb-card">
+        <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-7.webp alt="Dr. Liam Carter">
+        <div class="fw-semibold mt-2">Dr. Liam Carter</div>
+        <div class="text-muted small">Orthopedics</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="bg-white p-3 text-center rounded thumb-card">
+        <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-6.webp alt="Dr. Amelia Brooks">
+        <div class="fw-semibold mt-2">Dr. Amelia Brooks</div>
+        <div class="text-muted small">Cardiology</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="bg-white p-3 text-center rounded thumb-card">
+        <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-5.webp alt="Dr. Harper Lane">
+        <div class="fw-semibold mt-2">Dr. Harper Lane</div>
+        <div class="text-muted small">Dermatology</div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="bg-white p-3 text-center rounded thumb-card">
+        <img src=https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-2.webp alt="Dr. Lucas Grant">
+        <div class="fw-semibold mt-2">Dr. Lucas Grant</div>
+        <div class="text-muted small">Pulmonology</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .profile-container {
+            max-width: 960px;
+            margin: 50px auto;
+        }
+        .doctor-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        .doctor-card .card-img-top {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .profile-img {
+            width: 100%;
+            height: 250px; /* Adjust as needed */
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .name-section {
+            padding: 20px;
+        }
+        .name-section h4 {
+            font-weight: 600;
+            color: #333;
+        }
+        .details-text {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        .badge-info {
+            background-color: #e0f7fa;
+            color: #00838f;
+        }
+        .badge-secondary {
+            background-color: #f1f1f1;
+            color: #6c757d;
+        }
+        .nav-tabs .nav-item .nav-link {
+            border: none;
+            color: #6c757d;
+            border-radius: 8px 8px 0 0;
+            font-weight: 500;
+        }
+        .nav-tabs .nav-item .nav-link.active {
+            background-color: #fff;
+            color: #007bff;
+            border-bottom: 3px solid #007bff;
+        }
+        .tab-content {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0 12px 12px 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .tab-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .tab-content ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .tab-content ul li .fa-solid.fa-circle-check {
+            color: #28a745;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container profile-container">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="doctor-card p-3">
+                <img src="https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-5.webp" alt="Dr. Henry James" class="img-fluid profile-img mb-3">
+                <div class="name-section">
+                    <h4>Dr. Henry James</h4>
+                    <p class="details-text mb-1">Oncology • MBBS, MD</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <span class="badge rounded-pill text-bg-info me-2">Board Certified</span>
+                        <span class="badge rounded-pill text-bg-light">8 Years</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="bio-tab" data-bs-toggle="tab" data-bs-target="#bio" type="button" role="tab" aria-controls="bio" aria-selected="true">Bio</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="schedule-tab" data-bs-toggle="tab" data-bs-target="#schedule" type="button" role="tab" aria-controls="schedule" aria-selected="false">Schedule</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="bio" role="tabpanel" aria-labelledby="bio-tab">
+                    <p>Fugiat proident aliqua laboris, excepteur sunt ad pariatur occaecat. Veniam minim eu laboris, magna irure velit anim excepteur exercitation.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> Special interest in immunotherapy</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Member of ASCD</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Community outreach programs</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+                    <p>Schedule details will be displayed here.</p>
+                </div>
+                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                    <p>Patient reviews will be displayed here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ <style>
+    .cta-box {
+      background: #00838f;
+      color: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+    }
+    .cta-box h5 {
+      font-weight: 600;
+    }
+    .cta-phone {
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 10px 15px;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+    .cta-phone i {
+      margin-right: 8px;
+      color: #00838f;
+    }
+    .footer {
+      background: #fff;
+      padding: 50px 0 20px;
+      font-size: 15px;
+      color: #444;
+    }
+    .footer h5 {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .footer a {
+      color: #444;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #00838f;
+      text-decoration: underline;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+      border: 1px solid #aaa;
+      border-radius: 50%;
+      color: #444;
+      transition: 0.3s;
+    }
+    .social-links a:hover {
+      background: #00838f;
+      color: #fff;
+      border-color: #00838f;
+    }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #eaeaea;
+      padding-top: 15px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>MediNest</h5>
+          <p>A108 Adam Street<br>New York, NY 535022</p>
+          <p><strong>Phone:</strong> +1 5589 55488 55<br>
+          <strong>Email:</strong> info@example.com</p>
+          <div class="social-links mt-3">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>Useful Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>Our Services</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>Hic solutaesp</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Molestiae accusamus iure</a></li>
+            <li><a href="#">Excepturi dignissimos</a></li>
+            <li><a href="#">Suscipit distinctio</a></li>
+            <li><a href="#">Dilecta</a></li>
+            <li><a href="#">Sit quas consectetur</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>Nobis illum</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Ipsam</a></li>
+            <li><a href="#">Laudantium dolorum</a></li>
+            <li><a href="#">Dinera</a></li>
+            <li><a href="#">Trodela</a></li>
+            <li><a href="#">Flexo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © Copyright <strong>MediNest</strong> All Rights Reserved <br>
+        Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+
+<!-- Bootstrap JS + Icons -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</body>
+</html>
