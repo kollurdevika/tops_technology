@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - MediNest</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>MediNest - Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-  <style>
+
+ <style>
     .about-header {
       padding: 60px 0;
       text-align: center;
@@ -47,28 +49,78 @@
   </style>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-      <a class="navbar-brand" href="#">
-        <h1 style="color:black">Medi<span style="color:white;">Nest</span></h1>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 5%;">
-        <ul class="navbar-nav" style="gap:10%;">
-          <li class="nav-item"><a class="nav-link" href="index.html"> Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about_us.html"> About</a></li>
-          <li class="nav-item"><a class="nav-link" href="Departments.html">Departments</a></li>
-          <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="Doctors.html">Doctors</a></li>
-          <li class="nav-item"><a class="nav-link" href="Pages.html"> More Pages</a></li>
-          <li class="nav-item"><a class="nav-link" href="Dropdown.html"> Dropdown</a></li>
-          <li class="nav-item"><a class="nav-link" href="Contact.html"> Contact</a></li>
+  <a class="navbar-brand" href="#">
+    <h1 style="color:black">Medi<span style="color:white;">Nest</span></h1>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 5%;">
+    <ul class="navbar-nav" style="gap:8%;">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="about_us.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="Departments.html">Departments</a></li>
+      <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="Doctors.html">Doctors</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="morePagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More Pages
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="morePagesDropdown">
+            <li><a class="dropdown-item" href="Departments.html">Department Details</a></li>
+            <li><a class="dropdown-item" href="Services.html">Service Details</a></li>
+            <li><a class="dropdown-item" href="Appointment.html">Appointment</a></li>
+            <li><a class="dropdown-item" href="Doctors.html">Doctors</a></li>
+            <li><a class="dropdown-item" href="contact.html">contact</a></li>
+            <li><a class="dropdown-item" href="#">Gallery</a></li>
+            <li><a class="dropdown-item" href="#">Terms</a></li>
+            <li><a class="dropdown-item" href="#">Privacy</a></li>
+            <li><a class="dropdown-item" href="#">404</a></li>
+          </ul>
+        </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="Dropdown1.html">Dropdown 1</a></li>
+          <li><a class="dropdown-item" href="Dropdown2.html">Dropdown 2</a></li>
+          <li><a class="dropdown-item" href="Dropdown3.html">Dropdown 3</a></li>
+          <li><a class="dropdown-item" href="Dropdown1.html">Dropdown 4</a></li>
+          <li><a class="dropdown-item" href="Dropdown2.html">Dropdown 5</a></li>
+          <li><a class="dropdown-item" href="Dropdown3.html">Dropdown 6</a></li>
         </ul>
-      </div>
-      <button type="button" class="btn btn-dark" style="margin-right:0%"><i class="bi bi-calendar-plus"></i> Appointment</button>
-    </div>
-  </nav>
+      </li>
+       
+             <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="Dropdown1.html">Dropdown 1</a></li>
+          <li><a class="dropdown-item" href="Dropdown2.html">Dropdown 2</a></li>
+          <li><a class="dropdown-item" href="Dropdown3.html">Dropdown 3</a></li>
+          <li><a class="dropdown-item" href="Dropdown1.html">Dropdown 4</a></li>
+          <li><a class="dropdown-item" href="Dropdown2.html">Dropdown 5</a></li>
+          <li><a class="dropdown-item" href="Dropdown3.html">Dropdown 6</a></li>
+        </ul>
+      </li>
+      
+    </ul>
+  </div>
+
+  <button type="button" class="btn btn-dark" style="margin-right:0%">
+    <i class="bi bi-calendar-plus"></i> Appointment
+  </button>
+</nav>
+
 
 <section class="about-header">
   <div class="container">
@@ -221,7 +273,6 @@
   <div class="container">
     <div class="row text-center">
       
-      <!-- Mission -->
       <div class="col-md-4 mb-4">
         <div class="icon-circle">
           <i class="fa-solid fa-heart"></i>

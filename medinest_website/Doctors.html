@@ -12,63 +12,101 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
   <style>
-    .about-header {
-      padding: 60px 0;
-      text-align: center;
-    }
-    .about-header h2 {
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-    .breadcrumb-section {
-      background-color: #f8f9fa;
-      padding: 15px 0;
-      text-align:margin-left;
-    }
-    .about-content {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .about-content h3 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-    .about-content p {
-      font-size: 1.1rem;
-      color: #6c757d;
-      line-height: 1.8;
-      max-width: 800px;
-      margin: auto;
-    }
+  body {
+    margin: 0; 
+    padding: 0;
+  }
 
-
-
-  </style>
+  .about-header {
+    padding: 60px 0;
+    text-align: center;
+  }
+  .about-header h2 {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .breadcrumb-section {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    text-align: left; 
+  }
+  .about-content {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  .about-content h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .about-content p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: auto;
+  }
+</style>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-      <a class="navbar-brand" href="#">
-        <h1 style="color:black">Medi<span style="color:white;">Nest</span></h1>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 5%;">
-        <ul class="navbar-nav" style="gap:10%;">
-          <li class="nav-item"><a class="nav-link" href="index.html"> Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about_us.html"> About</a></li>
-          <li class="nav-item"><a class="nav-link" href="Departments.html">Departments</a></li>
-          <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="Doctors.html">Doctors</a></li>
-          <li class="nav-item"><a class="nav-link" href="Pages.html"> More Pages</a></li>
-          <li class="nav-item"><a class="nav-link" href="Dropdown.html"> Dropdown</a></li>
-          <li class="nav-item"><a class="nav-link" href="Contact.html"> Contact</a></li>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <h1 style="color:black; margin:0;">Medi<span style="color:white;">Nest</span></h1> 
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 5%;">
+      <ul class="navbar-nav" style="gap:8%;">
+        <li class="nav-item"><a class="nav-link" href="index.html"> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about_us.html"> About</a></li>
+        <li class="nav-item"><a class="nav-link" href="Departments.html">Departments</a></li>
+        <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="Doctors.html">Doctors</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="morePagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More Pages
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="morePagesDropdown">
+            <li><a class="dropdown-item" href="Departments.html">Department Details</a></li>
+            <li><a class="dropdown-item" href="Services.html">Service Details</a></li>
+            <li><a class="dropdown-item" href="Appointment.html">Appointment</a></li>
+            <li><a class="dropdown-item" href="Doctors.html">Doctors</a></li>
+            <li><a class="dropdown-item" href="contact.html">contact</a></li>
+            <li><a class="dropdown-item" href="#">Gallery</a></li>
+            <li><a class="dropdown-item" href="#">Terms</a></li>
+            <li><a class="dropdown-item" href="#">Privacy</a></li>
+            <li><a class="dropdown-item" href="#">404</a></li>
+          </ul>
+        </li>
+
+              <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="Dropdown1.html">Dropdown 1</a></li>
+          <li><a class="dropdown-item" href="Dropdown2.html">Dropdown 2</a></li>
+          <li><a class="dropdown-item" href="Dropdown3.html">Dropdown 3</a></li>
+          <li><a class="dropdown-item" href="Dropdown1.html">Dropdown 4</a></li>
+          <li><a class="dropdown-item" href="Dropdown2.html">Dropdown 5</a></li>
+          <li><a class="dropdown-item" href="Dropdown3.html">Dropdown 6</a></li>
         </ul>
-      </div>
-      <button type="button" class="btn btn-dark" style="margin-right:0%"><i class="bi bi-calendar-plus"></i> Appointment</button>
+      </li>
+       <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+      </ul>
+
+
     </div>
-  </nav>
+    <button type="button" class="btn btn-dark"><i class="bi bi-calendar-plus"></i> Appointment</button>
+  </div>
+</nav>
+
+<!-- Add space below navbar so content doesn’t hide -->
+<div style="margin-top:80px;"></div>
 
 
    <style>
@@ -95,13 +133,11 @@
 </head>
 <body>
 
-<!-- Hero Section -->
 <div class="text-center py-5">
   <h2 class="fw-bold">Doctors</h2>
   <p class="text-muted">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
 </div>
 
-<!-- Breadcrumb -->
 <div class="breadcrumb-bg py-2">
   <div class="container">
     <nav aria-label="breadcrumb">
@@ -113,7 +149,6 @@
   </div>
 </div>
 
-<!-- Filter Box -->
 <div class="container my-5">
   <div class="filter-box">
     <form class="row g-3 align-items-end">
@@ -123,7 +158,6 @@
         <input type="text" class="form-control" placeholder="Type a name or keyword">
       </div>
 
-      <!-- Department -->
       <div class="col-md-4">
         <label class="form-label fw-semibold">Department</label>
         <select class="form-select">
@@ -135,7 +169,6 @@
         </select>
       </div>
 
-      <!-- Location -->
       <div class="col-md-3">
         <label class="form-label fw-semibold">Location</label>
         <select class="form-select">
@@ -146,7 +179,6 @@
         </select>
       </div>
 
-      <!-- Button -->
       <div class="col-md-1 d-grid">
         <button type="submit" class="btn btn-info text-white">Apply Filters</button>
       </div>
@@ -213,7 +245,6 @@
 
 <div class="container py-5">
 
-  <!-- Filter Buttons -->
   <div class="text-center mb-4 filter-btns">
     <button class="btn btn-outline-secondary active" data-filter="all">All</button>
     <button class="btn btn-outline-secondary" data-filter="cardiology">Cardiology</button>
@@ -222,10 +253,8 @@
     <button class="btn btn-outline-secondary" data-filter="orthopedics">Orthopedics</button>
   </div>
 
-  <!-- Doctor Cards -->
   <div class="row g-4" id="doctor-list">
 
-    <!-- Doctor: Cardiology -->
     <div class="col-md-6 col-lg-3 doctor-item" data-category="cardiology">
       <div class="doctor-card">
         <div class="doctor-image">
@@ -245,7 +274,6 @@
       </div>
     </div>
 
-    <!-- Doctor: Pediatrics -->
     <div class="col-md-6 col-lg-3 doctor-item" data-category="pediatrics">
       <div class="doctor-card">
         <div class="doctor-image">
@@ -264,7 +292,6 @@
       </div>
     </div>
 
-    <!-- Doctor: Dermatology -->
     <div class="col-md-6 col-lg-3 doctor-item" data-category="dermatology">
       <div class="doctor-card">
         <div class="doctor-image">
@@ -284,7 +311,6 @@
       </div>
     </div>
 
-    <!-- Doctor: Orthopedics -->
     <div class="col-md-6 col-lg-3 doctor-item" data-category="orthopedics">
       <div class="doctor-card">
         <div class="doctor-image">
@@ -303,12 +329,10 @@
       </div>
     </div>
 
-    <!-- Doctor Cards -->
 <div class="row g-4" id="doctor-list">
 
   
 
-  <!-- Dr. Liam Carter - Orthopedics -->
   <div class="col-md-6 col-lg-3 doctor-item" data-category="orthopedics">
     <div class="doctor-card">
       <div class="doctor-image">
@@ -327,7 +351,6 @@
     </div>
   </div>
 
-  <!-- Dr. Maya Patel - Cardiology -->
   <div class="col-md-6 col-lg-3 doctor-item" data-category="cardiology">
     <div class="doctor-card">
       <div class="doctor-image">
@@ -346,7 +369,6 @@
     </div>
   </div>
 
-  <!-- Dr. Oliver Hayes - Pediatrics -->
   <div class="col-md-6 col-lg-3 doctor-item" data-category="pediatrics">
     <div class="doctor-card">
       <div class="doctor-image">
@@ -365,7 +387,6 @@
     </div>
   </div>
 
-  <!-- Dr. Harper James - Dermatology -->
   <div class="col-md-6 col-lg-3 doctor-item" data-category="dermatology">
     <div class="doctor-card">
       <div class="doctor-image">
@@ -390,7 +411,6 @@
   </div>
 </div>
 
-<!-- JavaScript Filtering Logic -->
 <script>
   const buttons = document.querySelectorAll(".filter-btns .btn");
   const doctors = document.querySelectorAll(".doctor-item");
@@ -458,7 +478,6 @@
 
 <div class="container">
 
-  <!-- Profile Section -->
   <div class="row g-4 bg-white p-4 rounded shadow-sm">
     <!-- Left: Image -->
     <div class="col-md-5 position-relative">
@@ -469,7 +488,6 @@
       </div>
     </div>
 
-    <!-- Right: Details -->
     <div class="col-md-7">
       <div class="mb-2">
         <span class="badge badge-custom">Chief Surgeon</span>
@@ -500,7 +518,6 @@
     </div>
   </div>
 
-  <!-- Thumbnail Carousel -->
   <div class="row mt-5 g-4">
     <div class="col-md-2">
       <div class="bg-white p-3 text-center rounded thumb-card">
@@ -814,7 +831,6 @@
   </footer>
 
 
-<!-- Bootstrap JS + Icons -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </body>

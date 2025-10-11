@@ -13,353 +13,99 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 
-  <style>
-
-    .light-background {
-  --background-color: #f7f9f9;
-  --surface-color: #ffffff;
-}
-
-.dark-background {
-  --background-color: #021418;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #11262a;
-  --contrast-color: #ffffff;
-}
-
-:root {
-  scroll-behavior: smooth;
-}
-
-
-body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
-}
-
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
-}
-
-    body {
-      body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-    }
-
-
-    
-  .hover-zoom img {
-    transition: transform 0.5s ease;
-  }
-  .hover-zoom:hover img {
-    transform: scale(1.05);
-  }
-
-  
-  .hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-
- 
-  .hover-scale {
-    transition: transform 0.3s ease;
-  }
-  .hover-scale:hover {
-    transform: scale(1.05);
-  }
-
- 
-  .hover-underline {
-    position: relative;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  .hover-underline::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    display: block;
-    margin-top: 4px;
-    left: 0;
-    background: currentColor;
-    transition: width 0.3s ease;
-  }
-  .hover-underline:hover::after {
-    width: 100%;
-  }
-    .btn-custom {
-      background-color: #00a5a5;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-    .btn-custom:hover {
-      background-color: #006666;
-      transform: scale(1.05);
-    }
-    .hero-section {
+ <style>
+    .about-header {
       padding: 60px 0;
-      background: #f9fdfd;
-    }
-    .hero-section h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #222;
-    }
-    .hero-section p {
-      font-size: 1rem;
-      color: #555;
-      margin: 20px 0;
-    }
-    .doctor-img {
-      border-radius: 12px;
-      width: 100%;
-      max-width: 400px;
-    }
-    .contact-box {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: white;
-      padding: 12px 18px;
-      border-radius: 8px;
-      box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-      font-size: 14px;
-      transition: 0.3s;
-    }
-    .contact-box:hover {
-      background: #00a5a5;
-      color: white;
-    }
-    .contact-box i {
-      color: #00a5a5;
-      margin-right: 8px;
-    }
-    .contact-box:hover i {
-      color: white;
-    }
-    .stats-box {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin: 20px 0;
-    }
-    .stat {
       text-align: center;
-      flex: 1;
-      min-width: 120px;
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 10px;
-      transition: 0.3s;
     }
-    .stat h4 {
-      font-size: 1.5rem;
-      color: #00a5a5;
-      font-weight: bold;
+    .about-header h2 {
+      font-weight: 700;
+      margin-bottom: 15px;
     }
-    .stat:hover {
-      background: #00a5a5;
-      color: white;
-      transform: translateY(-5px);
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    .breadcrumb-section {
+      background-color: #f8f9fa;
+      padding: 15px 0;
+      text-align:margin-left;
     }
-    .stat:hover h4 {
-      color: white;
-    }
-    .bottom-links {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-    .bottom-links a {
-      text-decoration: none;
-      color: #008c8c;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    .bottom-links a:hover {
-      color: #006666;
-    }
-    .bottom-links i {
-      margin-right: 6px;
-    }
-
-    .department-card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 25px;
+    .about-content {
+      padding: 80px 20px;
       text-align: center;
-      transition: all 0.3s ease-in-out;
-      border: 1px solid #e9ecef;
-      height: 100%;
     }
-    .department-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      border-color: #0d6efd;
+    .about-content h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
     }
-    .icon-circle {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: #eaf3ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 15px;
-      font-size: 28px;
-      color: #0d6efd;
-    }
-    .stats {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 15px;
-    }
-    .stats div {
-      font-weight: bold;
-      color: #0d6efd;
-    }
-    .stats small {
-      display: block;
-      font-size: 12px;
+    .about-content p {
+      font-size: 1.1rem;
       color: #6c757d;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: auto;
     }
-    .full-cover {
-  width: 100vw;   
-  height: 100vh;  
-  background-color: #007bff; 
-}
-.dropdown-menu {
-    border: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 10px 0;
-}
 
-/* Style for the dropdown menu items */
-.dropdown-item {
-    font-weight: 400;
-    color: #555 !important;
-    padding: 10px 20px;
-    transition: background-color 0.2s ease-in-out;
-}
 
-/* Hover effect for dropdown items */
-.dropdown-item:hover {
-    background-color: #f0f8ff;
-    color: #008080 !important;
-}
-
-/* Style for the Appointment button */
-.btn-outline-info {
-    color: #008080;
-    border-color: #008080;
-    font-weight: 600;
-    border-radius: 50px;
-}
-
-/* Hover effect for the button */
-.btn-outline-info:hover {
-    background-color: #008080;
-    color: #fff;
-}
 
   </style>
 </head>
-
 <body>
-  <div class="container-fluid">
-  <div class="row">
-    <div class="col-12  text-white">
-    
 
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <a class="navbar-brand" href="#">
+    <h1 style="color:black">Medi<span style="color:white;">Nest</span></h1>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 5%;">
+    <ul class="navbar-nav" style="gap:8%;">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="about_us.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="Departments.html">Departments</a></li>
+      <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="Doctors.html">Doctors</a></li>
 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="morePagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More Pages
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="morePagesDropdown">
+            <li><a class="dropdown-item" href="Departments.html">Department Details</a></li>
+            <li><a class="dropdown-item" href="Services.html">Service Details</a></li>
+            <li><a class="dropdown-item" href="Appointment.html">Appointment</a></li>
+            <li><a class="dropdown-item" href="Doctors.html">Doctors</a></li>
+            <li><a class="dropdown-item" href="contact.html">contact</a></li>
+            <li><a class="dropdown-item" href="#">Gallery</a></li>
+            <li><a class="dropdown-item" href="#">Terms</a></li>
+            <li><a class="dropdown-item" href="#">Privacy</a></li>
+            <li><a class="dropdown-item" href="#">404</a></li>
+          </ul>
+        </li>
 
-  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-      <a class="navbar-brand" href="#">
-        <h1 style="color:black">Medi<span style="color:white;">Nest</span></h1>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 5%;">
-        <ul class="navbar-nav" style="gap:10%;">
-          <li class="nav-item"><a class="nav-link" href="index.html"> Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about_us.html"> About</a></li>
-          <li class="nav-item"><a class="nav-link" href="Departments.html">Department</a></li>
-          <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="Doctors.html">Doctors</a></li>
-          <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMorePages" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        More Pages
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMorePages">
-        <li><a class="dropdown-item" href="#">Department Details</a></li>
-        <li><a class="dropdown-item" href="#">Service Details</a></li>
-        <li><a class="dropdown-item" href="#">Appointment</a></li>
-        <li><a class="dropdown-item" href="#">Testimonials</a></li>
-        <li><a class="dropdown-item" href="#">Frequently Asked Questions</a></li>
-        <li><a class="dropdown-item" href="#">Gallery</a></li>
-        <li><a class="dropdown-item" href="#">Terms</a></li>
-        <li><a class="dropdown-item" href="#">Privacy</a></li>
-        <li><a class="dropdown-item" href="#">404</a></li>
-    </ul>
-</li>
-
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMorePages" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMorePages">
-        <li><a class="dropdown-item" href="#">Dropdown1</a></li>
-        <li><a class="dropdown-item" href="#">Dropdown2</a></li>
-
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMorePages">
-<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMorePages" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-   Deep Dropdown
-    </a>        <li><a class="dropdown-item" href="#">Dropdown1</a></li>
-        <li><a class="dropdown-item" href="#">Dropdown2</a></li>
-        <li><a class="dropdown-item" href="#">Dropdown4</a></li>
-        <li><a class="dropdown-item" href="#">Dropdown5</a></li>
-        <li><a class="dropdown-item" href="#">Dropdown5</a></li>
-      </ul>
-        <li><a class="dropdown-item" href="#">Dropdown3</a></li>
-        <li><a class="dropdown-item" href="#">Dropdown4</a></li>
-        <li><a class="dropdown-item" href="#">Dropdown5</a></li>
-        
-    </ul>
-</li>
-
-          <li class="nav-item"><a class="nav-link" href="Contact"> Contact</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="Dropdown1.html">Dropdown 1</a></li>
+          <li><a class="dropdown-item" href="Dropdown2.html">Dropdown 2</a></li>
+          <li><a class="dropdown-item" href="Dropdown3.html">Dropdown 3</a></li>
+          <li><a class="dropdown-item" href="Dropdown1.html">Dropdown 4</a></li>
+          <li><a class="dropdown-item" href="Dropdown2.html">Dropdown 5</a></li>
+          <li><a class="dropdown-item" href="Dropdown3.html">Dropdown 6</a></li>
         </ul>
-      </div>
-      <button type="button" class="btn btn-dark" style="margin-right:0%"><i class="bi bi-calendar-plus"></i> Appointment</button>
-    </div>
-  </nav>
+      </li>
+      
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <button type="button" class="btn btn-dark" style="margin-right:0%">
+    <i class="bi bi-calendar-plus"></i> Appointment
+  </button>
+</nav>
 
        <style>
     .hero-image {
@@ -383,7 +129,6 @@ a:hover {
       gap: 10px;
     }
 
-    /* Emergency card (top-left) */
     .emergency-card {
       top: 20px;
       left: 20px;
@@ -409,7 +154,6 @@ a:hover {
       color: #000;
     }
 
-    /* Stats card (bottom-right) */
     .stats-card {
       bottom: 20px;
       right: 20px;
@@ -434,7 +178,6 @@ a:hover {
       display: block;
     }
 
-    /* Custom buttons */
     .btn-custom {
       background-color: #0dcaf0;
       color: #fff;
@@ -503,7 +246,6 @@ a:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   }
 
-  /* Emergency card (top-left) */
   .emergency-card {
     top: 20px;
     left: 20px;
@@ -536,7 +278,6 @@ a:hover {
     color: #000;
   }
 
-  /* Stats card (bottom-right) */
   .stats-card {
     bottom: 20px;
     right: 20px;
@@ -567,7 +308,6 @@ a:hover {
     display: block;
   }
 
-  /* Custom buttons */
   .btn-custom {
     background-color: #0dcaf0;
     color: #fff;
@@ -592,7 +332,6 @@ a:hover {
     background-color: #f8f9fa;
   }
 
-  /* Hover underline links */
   .hover-underline {
     text-decoration: none;
     color: #333;
@@ -604,7 +343,6 @@ a:hover {
     color: #0dcaf0;
   }
 
-  /* Icon boxes on right side */
   .text-center {
     transition: transform 0.3s, color 0.3s;
     cursor: pointer;
@@ -627,18 +365,15 @@ a:hover {
 </head>
 <body>
 
-<!-- Hero Section -->
 <section class="py-5">
   <div class="container">
     <div class="row align-items-center">
       
-      <!-- Left Side: Doctor Image -->
       <div class="col-lg-5 mb-4 mb-lg-0">
         <div class="hero-image">
           <img src="https://bootstrapmade.com/content/demo/MediNest/assets/img/health/staff-8.webp" 
                alt="Healthcare Professional" class="img-fluid main-image">
 
-          <!-- Emergency Floating Card -->
           <div class="floating-card emergency-card">
             <i class="bi bi-telephone-fill"></i>
             <div class="text">
@@ -647,7 +382,6 @@ a:hover {
             </div>
           </div>
 
-          <!-- Stats Floating Card -->
           <div class="floating-card stats-card">
             <div class="stat-item">
               <span class="number">25K+</span>
@@ -661,7 +395,6 @@ a:hover {
         </div>
       </div>
 
-      <!-- Right Side: Content -->
       <div class="col-lg-7">
         <span class="badge bg-info text-dark mb-2" style="font-size: 110%;">TRUSTED HEALTHCARE PROVIDER</span>
         <h1 class="fw-bold" style="font-size: 2.5rem;">Excellence in Medical Care<br> Since 1985</h1>
@@ -670,7 +403,6 @@ a:hover {
           Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
         </p>
 
-        <!-- Stats Row -->
         <div class="d-flex gap-4 flex-wrap my-4">
           <div class="text-center">
             <i class="bi bi-award fs-2 text-info"></i>
@@ -689,13 +421,11 @@ a:hover {
           </div>
         </div>
 
-        <!-- Buttons -->
         <div class="d-flex gap-3 mt-3">
           <a href="#" class="btn btn-custom hover-scale"><i class="bi bi-calendar-plus"></i> Schedule Consultation</a>
           <a href="#" class="btn btn-outline-secondary hover-scale"><i class="bi bi-play-circle"></i> Watch Our Story</a>
         </div>
 
-        <!-- Bottom Links -->
         <div class="mt-4 d-flex flex-wrap gap-3">
           <a href="#" class="hover-underline"><i class="bi bi-calendar-check"></i> Find Available Times</a>
           <a href="#" class="hover-underline"><i class="bi bi-chat-dots"></i> Chat with Support</a>
@@ -1446,7 +1176,7 @@ a:hover {
 
 <style>
     .stats-section {
-      background: #f8fafa; /* Light background */
+      background: #f8fafa;
       padding: 60px 0;
     }
     .stat-box {
@@ -1456,7 +1186,7 @@ a:hover {
     .stat-box h2 {
       font-size: 2rem;
       font-weight: bold;
-      color: #0097a7; /* Teal color */
+      color: #0097a7; 
       margin-bottom: 10px;
     }
     .stat-box p {
