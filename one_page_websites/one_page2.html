@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ebook Landing Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #3a3431;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 0;
+    }
+    .book-cover img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      transform: scale(0.95);
+      transition: transform 0.4s ease;
+    }
+    .book-cover img:hover {
+      transform: scale(1.05);
+    }
+    .price-tag {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #ffc107;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero-content input {
+      padding: 12px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 20px;
+      width: 100%;
+    }
+    .hero-content button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      background: #ffc107;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .hero-content button:hover {
+      background: #e0a800;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src=https://crafto.themezaa.com/ebook/wp-content/uploads/sites/13/2025/05/demo-ebook-logo-whit.svg alt="EBOOK Logo" class="d-inline-block align-text-top me-2" style="height: 30px;">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+      <ul class="navbar-nav d-flex" style="margin-right: 15%;">
+        <li class="nav-item">
+          <a class="nav-link" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CHAPTER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">AUTHOR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">REVIEWS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SUBSCRIBE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">PRICING</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACT</a>
+        </li>
+      </ul>
+      <form class="d-flex ms-3">
+        <button class="btn btn-outline-light" type="submit">PURCHASE NOW <i class="bi bi-box-arrow-in-right"></i></button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<style>
+
+.navbar {
+
+  background-color: #554a43 !important; /* The dark brown from the image */
+  font-family: Arial, sans-serif; /* A simple, sans-serif font */
+}
+
+.nav-link,
+.navbar-brand {
+  color: #fff !important; /* White color for links */
+  font-weight: bold;
+}
+
+.btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #554a43;
+}
+
+</style>
+
+<!-- Hero Section -->
+<section class="hero-section container">
+  <div class="row align-items-center">
+    <!-- Book Cover -->
+    <div class="col-md-6 position-relative animate__animated animate__fadeInLeft wow">
+      <div class="book-cover">
+        <img src=https://crafto.themezaa.com/ebook/wp-content/uploads/sites/13/2024/10/demo-ebook-left-01.png.webp alt="Book Cover">
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="col-md-6 hero-content animate__animated animate__fadeInRight wow">
+      <h1>SELL YOUR BOOK FAST</h1>
+      <p class="lead">Read by over <strong>60,000+</strong> fashion designers.</p>
+      <input type="email" placeholder="Enter your email address">
+      <button>Get Started Now!</button>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS + WOW.js + Animate On Scroll -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+  // Initialize WOW for scroll animations
+  new WOW().init();
+</script>
+  <hr style="color: yellow; width: 20%;">
+
+  <style>
+/* ... existing styles ... */
+
+body {
+    background-color: #f7f7f7; /* Lighter background for this section */
+}
+
+.about-section {
+    background-color: #ffffff; /* White background for the card section */
+}
+
+.text-yellow {
+    color: #ffc107;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.text-dark-brown {
+    color: #3a3431;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff5e0;
+    border: 1px dashed #ffc107;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-icon .icon-img {
+    width: 30px;
+    height: 30px;
+}
+
+.quote-container {
+    background-color: #fef4e7;
+    padding: 10px 30px;
+}
+
+.thumb-icon {
+    top: -50px;
+    right: 15%;
+}
+
+.ribbon-icon {
+    bottom: -30px;
+    left: 20%;
+}
+
+</style>
+</body>
+</html>
