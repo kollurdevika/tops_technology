@@ -1,0 +1,26 @@
+.contact {
+  background: #f8fafc;
+}
+
+.contact-card {
+  background: #fff;
+  border: none;
+}
+
+.contact-info {
+  transition: transform 0.2s;
+}
+
+.contact-info:hover {
+  transform: translateY(-4px);
+}
+
+.contact-icon {
+  font-size: 1.75rem;
+  display: block;
+}
+
+.contact .form-control:focus {
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.2);
+  border-color: #0d9488;
+}

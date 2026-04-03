@@ -1,0 +1,19 @@
+.services {
+  background: #f8fafc;
+}
+
+.services-img-wrap {
+  height: 200px;
+  overflow: hidden;
+}
+
+.services-img-wrap img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.card-trade:hover .services-img-wrap img {
+  transform: scale(1.06);
+}

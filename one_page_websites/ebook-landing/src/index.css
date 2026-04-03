@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #3a3431;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar Customization */
+.navbar {
+  background-color: #554a43 !important;
+  padding: 15px 0;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand img {
+  height: 35px;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0 8px;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0px;
+  left: 0;
+  background-color: #ffc107;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.btn-outline-light {
+  border-color: #fff;
+  border-width: 2px;
+  color: #fff;
+  border-radius: 30px;
+  padding: 8px 25px;
+  font-weight: 600;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #554a43;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  /* Account for navbar */
+  background: radial-gradient(circle at top right, #4a423e, #3a3431);
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.book-cover-container {
+  perspective: 1500px;
+}
+
+.book-cover img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: -15px 20px 40px rgba(0, 0, 0, 0.6);
+  transform: rotateY(-15deg) rotateX(5deg);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.book-cover img:hover {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ffffff 0%, #ffc107 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-input {
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+}
+
+.hero-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffc107;
+  outline: none;
+  color: #fff;
+}
+
+.hero-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  background: #ffc107;
+  color: #3a3431;
+  font-weight: 800;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.hero-btn:hover {
+  background: #ffcd38;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.5);
+}
+
+/* About/Features Section */
+.section-padding {
+  padding: 100px 0;
+}
+
+.bg-light-custom {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.text-yellow {
+  color: #ffc107;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-weight: 800;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #3a3431;
+}
+
+.card-custom {
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 40px 30px;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.card-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fff8e1;
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+.card-custom:hover::before {
+  width: 100%;
+}
+
+.card-custom:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff8e1;
+  color: #ffc107;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
+}
+
+.card-custom:hover .icon-box {
+  background-color: #ffc107;
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+/* Reviews */
+.reviews-section {
+  background-color: #fff;
+  color: #333;
+}
+
+.testimonial-card {
+  background: #f9f9f9;
+  padding: 40px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.testimonial-card i.quote-icon {
+  font-size: 3rem;
+  color: #e0e0e0;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Pricing */
+.pricing-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px 30px;
+  color: #333;
+  transition: all 0.3s;
+  border: 1px solid #eee;
+}
+
+.pricing-card.featured {
+  background: #3a3431;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card.featured .btn-price {
+  background: #ffc107;
+  color: #000;
+}
+
+.price {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+.btn-price {
+  display: inline-block;
+  padding: 12px 35px;
+  border-radius: 30px;
+  background: #f0f0f0;
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+/* Footer */
+footer {
+  background-color: #2b2624;
+  padding: 70px 0 30px;
+  color: #aaa;
+  border-top: 1px solid #3a3431;
+}
+
+footer h5 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+footer ul li {
+  margin-bottom: 12px;
+}
+
+footer a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ffc107;
+  padding-left: 5px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #3a3431;
+  color: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.social-icon:hover {
+  background: #ffc107;
+  color: #3a3431;
+  transform: translateY(-3px);
+}

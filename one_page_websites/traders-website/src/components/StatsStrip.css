@@ -1,0 +1,16 @@
+.stats-strip {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+}
+
+.stats-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2dd4bf;
+  display: block;
+}
+
+.stats-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}

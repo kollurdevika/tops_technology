@@ -1,271 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCA Travel Agency - International Holidays</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+  <title>Level – Travel Website</title>
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-link.active {
+      color: #0d6efd !important;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero-section {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+      url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    /* SAME SIZE IMAGES */
+    .img-box {
+      height: 250px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Blog cards */
+    .blog-card {
+      height: 100%;
+    }
+
+    /* Footer */
+    footer {
+      background: #0d1b2a;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    /* ======================
+   GLOBAL TRANSITION
+====================== */
+a, button, img, .card, .img-box, .form-control {
+  transition: all 0.35s ease;
 }
 
-/* Header Styles */
-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ======================
+   NAVBAR HOVER
+====================== */
+.navbar-nav .nav-link:hover {
+  color: #0d6efd !important;
 }
 
-header h1 {
-    font-size: 3rem;
-    font-weight: bold;
+.navbar-brand:hover {
+  transform: scale(1.05);
 }
 
-/* Navigation Bar */
-.navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
+/* ======================
+   BUTTON HOVER
+====================== */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(13,110,253,0.35);
 }
 
-.nav-link {
-    font-weight: 500;
+/* ======================
+   IMAGE HOVER (PORTFOLIO + BLOG)
+====================== */
+.img-box img {
+  transform: scale(1);
 }
 
-/* Sections */
-section {
-    padding: 60px 0;
+.img-box:hover img {
+  transform: scale(1.12);
 }
 
-section h2 {
-    font-weight: 700;
-    color: #0d6efd; /* Bootstrap primary color */
-}
-
-/* Card Styles */
-.card {
-    border: none;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
+/* ======================
+   CARD HOVER (BLOG)
+====================== */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-.card-title {
-    color: #333;
-    font-weight: bold;
+/* ======================
+   HERO BUTTON SPECIAL HOVER
+====================== */
+.hero-section .btn:hover {
+  background-color: #fff;
+  color: #0d6efd;
 }
 
-.card-img-top {
-    object-fit: cover;
-    height: 200px;
+/* ======================
+   FORM INPUT HOVER + FOCUS
+====================== */
+.form-control:hover,
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,.15);
 }
-</style>
 
-/* Footer */
-footer {
-    background-color: #212529; /* Bootstrap dark color */
+/* ======================
+   MAP HOVER
+====================== */
+iframe:hover {
+  filter: brightness(1.05);
 }
+
+/* ======================
+   FOOTER HOVER
+====================== */
+footer:hover {
+  background: #081423;
+}
+
+/* ======================
+   SECTION HOVER (SOFT)
+====================== */
+section:hover {
+  background-color: rgba(0,0,0,0.01);
+}
+
+  </style>
 </head>
-<body>
 
-    <header class="bg-dark text-white text-center py-4">
-        <div class="container">
-            img src= https://r1imghtlak.ibcdn.com/aeb91a86afa211ee8c5f0a58a9feac02.jpg?downsize=245:152&output-format=webp class="card-img-top" alt="Luxury Hotel">
-            <h1>DCA Travel Agency</h1>
-            <p class="lead">Your Gateway to International Holidays & Vacations</p>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="80" tabindex="0">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#home">
+      <img src=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMHEhUTBxMWFhMTGRgYFhgXFxgdFRMZIRUYGBYWHx8eHCkhGRouGxgYIjIiJSsrLi8uGSAzODM4NykvOisBCgoKDg0OGxAQGi0lICU3LS8vLS8tLS0tLS0tNy0tLS0tLS0tLS0tLS0tLy8tLS0tLS0tLS0vLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQECAwj/xABAEAACAgECBAQDBQUGBAcAAAABAgADEQQhBQYSMRNBUWEiMnEHFCOBkRVCQ1KCU3KSocHRJGJzohY1g6OxssL/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAgMEAQX/xAAlEQEAAgICAgICAgMAAAAAAAAAAQIDERIhBDEiQROBUfGhsdH/2gAMAwEAAhEDEQA/ALxiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiBXHO2g4rwixtZwDVWW1j4npIU9A7kBcYZfphh795quH/bL+C37Q0/4wX4Cjfh2N5dWd0/LMtqxBYCLACD3BGQZXvPv2bpxjqu4MAuoJGV+Fa2GN8+h998nvt2tpas9WhGYn6bf7NuMarjuma7jPhnqc+H0EZC/ysB8uD2yc47yR6fiNOqd69NajWVY8RFYFq89uoA5HbznzHTrNVy3ZYlD20WbpYoJU+hyOx9j+YMk/wBk/GdJwbUtZxmyxLHBVWJ/BIOCevG/VnzO35yd8PuYRrf6X/MHiPGNPwvH7Svrq6jgdbqpJ9gTvKs5z+1K65enllGSkkqNQynLkD4ggIwO43O/sJWmmpv43eBWHuusPmSzNv5k+XudhOVwTPck3iH03pOOafWXWafT2A3Vbum+QNt+243Hb1mXqtUmkAOpYKGYKM+bE4Aka5E5TPL6vbxFvE1eo3ufyG+Qi+wzufP6ASVyq2onpOGJZxOmrxPFtRRTjxSzACvIyCxOwGPWZC2qxwrAkjqxkZx6/T3nLIGyGAIPf3nm2lRm6ii9XT0dWB1dOc9Oe/TnynHXtEw6uGpR4Y0/Ui056VViFIIxhhn4h6Z7TgJfQAFZbCbMsW+DprJOw6QcsBjGcZxvODNiYbcRWoMdZmpUcJ1WYCuSQFIOexJA3xvMyAiIgIiICIiAiIgIiICIiAiIgIiedt6048ZlXqOBkgZPoM9zA9IiQfn/AJ2HB86bhTJ95KlmZiOmlAMk7/NYR8q+f/z2sTM6hyZ01H2zaXQ2oDeca7H4QrXqssXuVcD9zGcE9vLPY1XXpa+F/FxHFlowRSN0XdGHiMNmRkLDCtkEbzKXU2au4pwQWXaiw5N25vsYM+LEOzVKUYBgT+cyuZeRdRyxpqr+IFc2P0FF38P4Sy5bsTsRtt7zZWIrqu1M99w8eXOE6jnbUClLAvSvUxPyoi9KZCj5mwVHqcbmXvypylpuV06eHrlyPjtbBsf8/Iew2lE8g8yrypqLL7kL5pdFUbZYvWwyfJcKd5e/JXMP/ifSJqGrNbNkMu/TkHBKn95ff8vKV5+X6Sx6/bexETMtIiICIiBwyhtm3mFfomr8RuHP02WFSfE63rGMA4XqHTldtseRmdEDwq1PWzqysvQQMsMK+RnKnz9PqJ7zx1ekTWALqlDAFWAIzhlOVb6gjMxk1R0rBOI2J1WuwpwrDqAXqCncjrAB9Mgdp0Z8RE4EREBERAREQEREBERATSc18sUc0U+HxBdxk1uPnrbHcf6jsZu5EvtA5uPLVaJoFFmqvOKk743wWI7kZwAPMmSrEzPTk612ra3VcQ5CsamzUMxOVorB61syNrOk5KqPQYJbbsDO3LH2a6nmJvH445rrsJYnIN1hJ3OOy/U/pJL9pvAzp9C2r069GpZkbUsrMxZSOlkDHcICRgDAwJM+R6fA4fpFP9jWf1UH/WXTfVdx7Qivepe/L/L2m5eTo4VWFB+Zu7v7s3czVfadoDxHh161L1MoDjt8PQesn9ARt6yVTx1lC6lGS9epWBBX+Yekpi072nrrT5u+z9NI+sB5kKDTojses4QsOnpB/m7n4fOfSenZXRTpsdBA6enHT042xjyxPnTkrldOK8ROj4r1Ba/E6wpwSUOOnPofUT6I0OkTQVpVo1C11gKqjsoHYS7yNbQx+nvE877l06l72CqoySTgAeZMjiWW8071lqdF6jK26keoPdK/cbmUxXfaU210yuI8z1aZmTRq19i/MteOmv8AvuT0p+ci2t5wuu+W5UBPSF0yeK2T2BsfFefpmbHinA6dDfUdWcaNUOKgD0C0HZmVR8S4Pc53G53mBouDHilllZtYJ0+IFdV6QzOOk4UjuFOx3A7d5bXhEKLTeZ040dWp4r1dB1Xw/MbdUteNic9NdZxOH0Gtofppq1RHcPXrAyn/ABpMHgvHW1utroFCpT1EPUCSGfpwbGJGWxg7HbHuJaY2nb2mk9w5jrF49+lWabnW3SsVGoclSQV1NSFQQcEddR6vz6TJTwvnarUAftFfCB28QMHoJ9OobofZgJXfMPFk1+ue3U1h6lYp0ZK9Srkd1PfOTke0wquJHQNaOGHprsIwWXJUA7eudiQRuDLpwxaN6Z4z2rbW9wvtWDjKHIPYjsZ5axGetxS/QxVul8A9BwcNg7HHfErblfjN2jZl0dbHoHXZpxkqybfjUE/L3HwdjnaTleMJxKtRwi1fEuRzUSrMoK4B6gMYwSAQSDMt8c1ltx5YvDO0GoXV1o9Lq6uoIdflfb5h7GZE61p4YAGNh5DA/TynaVrSIiAiIgIiICIiAiIgJVSL+2uP51W602OqD0FNKEf+5aW/IS1ZU/GieWuLm6zPhmwag/8ASsRaNQR/ddUbHoTLMf2jZZfGeHLxei2jUfLcjIT5gEYyPcd5kaTTrpESun5UUKv0AAH+Qnop6hlexnMr2kREQKs4ZofuPM1uO1lTWD+pUz/3Bpacxk0FaWtcFHisoQvj4ukEkLnyGSTNZzbr20tQr0rdNuobw0P8gIzZZ/SmT+knM85iEJ+MTKP8z8W/ali1VYNXiCtF8tRd1AEn1qrJBP8AMdpN9NWalVXOSAATgDOBjOBsPpIDyTw88S1H3pQBpqB4enB3JAyCw32OdyT3LH0lhyWXUarCGLc7tKN81c21cvkIwL2sOoKOwBJAZj6bHb2mi1fEwWXUcefCL1WUVqDW1oBx1FSclj5DPY/WbrmLlyni2prt4iMV1VnqbqAVz1/Ah9hlie3zDeYn2i6SvVaRmRq1erpbPSCxTcKgI3UEnY9tpKnHqEL8/lP8emn+z3SLdZdxDVOFAZxgnZc4ZmLE+hx+szeK88jiR+7cuoz2WZRXYhVB33GRvt9JXNfEbEpahGxWzh2HqQMDPtt2mIjGsg1kgjcEHBB8iD5TV+Ddtz+mOPI4141/btbWaWZbhhlJVge4IOCP1ks4PyV+0dMtttorttJ8BGxiwBSd/PsGO3YCaBuGWVIl3EAVqsYfESOtgR1FgpOWBHnLLp4st76KrhSBGBIap9ylRoYh/hyMfJvn97HczmXJMR8TBii0zyYnJXANRpuuw2oD4Pg1sB1FGFh6lYZw3SRjvuJtNYh5XtGoTfT3FRqgBhUc4UagD90Z+YD1zJNp6BQuK1VfMhRgZO5P6zjVaZdWjV6gAo4KsD2IIwRMc5Jmdy9CMUVrqHqD1br2nMj/ACjc1K2aTVHL6RugE92qO9Lf4dvqskEhManSdbbjZEROJEREBERAREQEREBNDzhy8OP1AVYF1RLVMR8OSCGRh51sCQR/tN9E7E67Fe8kcxnhx+5cZyoRvDrLn4qm8tPYfX+R+zLjzlhSP81crV8fUkYS4KVD4yrr512L++h/UdwQZHeDcf1HLdg03MCMU/cbdnUDzU/x6gP/AFF8we8nMcu4RjpYUTy0upTWIr6VldGGVZSCCPUET1laRK1+0DiB8W8r/BrShfZ7h12H6+EuP6pZUpjnSzq8Q/2uqvJ/oSupf8sy/wAeN2ZvKtqi2OBIlWnpGlACeGnTj0Kg5/1mdIbpuYv2fwzx6gGNeK1HkT8KgnHl/tIzp+eNXra7ReNjX4avWvSFsLAKzMThc5x374nPxWtMuznrWIiUo5t5zq4S4qqUWWKQW8xV3392x5ZHcSt9bx+zUhlrz0WLh1Y9QJ6urKjACeWy47TEfTrQT97s6mD4ZUOSR3Zw+69+3ecHXdAK6RQgL9QOxtXHyjrwDgHfbE2UxVr6YMme9p76dTomrVjdhChAKscWEnBGF79jnMWOlfUunHUrdOGcYdcbnADYGTtvnb0mO7FyS5JJ7k7kwPeW6/lRvXpZPJnDn19ficwIWq8NPCdhV0LWhyu/zg9/YjvJ1pNTTqTnSlSekMCB3Q9iD5j4f8pG9LwO/jOhoo4i4qrCJ1BATYyhR0KerZfIkYO4ke4tpNRylfSnCKbLaupDXk5/E+IWrsMp1AjPl32nn2iLzPfb1K2nHWNx1/lO35hoXU/dS48fb4TsSChYEZ+YbY29Zk8J4gOKViysFfidSrfMpV2RgfzWRLknjNnEHFPFdI63IGL3ugHUUZVXuMlgr4z/ALyV8O0H3FrSjEra/idJ/cJUBgPYkZ/OV3rx6XUtyjbWa/8A4LiOnsXtqK7KX/vL+JX/APsfnJFI9zcfD+6uP3dVSPyYlD/9pIZy3qHa+5giIkUyIiAiIgIiICIiAiIgJi8R4fXxNDXrkDqfI9wfIgjdT7jeZUQIRZwPVctubOCM1tZOWTYufquwt/vAq+25btN3wPmariow3wWDZlPk38u4BB/5WCt7TeTU8Z4DRxT4tQpWwDaxD02jzxkfMP8AlOR7SfKJ9ua16baU9zlpiwfBUCrU6jOWAJ6hU4AB3Y4OdvISaaWzVaWkfeVtvodfmUeHrKQR5pnc481IPos0nMnCBxyu63gTi3L1Oa9xajLX4bgq24JUIcEA7S3D8bdyz+TWbU6hFtBx0cLWyhB49FnTlbAQnfLkLknPbByO0zOInFiargnVZXcT+F07IVAVkZF2buPLsRIvbW1LFbgVYdwQQR+Rku+zLSffNT8dhC1DxOjO1jbqD+Wc/pNd4isTaGDHabWik/0jvE9P4ZOKbamG7K42AONxlQQMnt9N5gYn0PrtEmuRk1ShlYYII8pT/N/Kb8DcnSq70EAh8Z6T5hsdvr7yGLPFupTz+NNO47hGZYH2V8Fr1JfUajDGs9KqRspxkv8AXBwPzlfyc/ZxzOnC+qjiJC1sSyudgGwAQT6EDvJ54maTpX401/JHJa0Ykdv520NBAN4OTj4QxA98gYxN9pr11Sq9BDKwBUjsQdwZ5s1mPcPXretvUtdx206Lw76xkVuFcetbkK36Hob+k+s0XP8AqX5fpt1fDbmrtc1qF+Fq7CDj5WB36c7jGyj0ks1enXVo1d3yuCp+hGDKK+07WO+pFN17WmhAGOMIGIzsu+/TjJycknt2F2CvKyjyb8K7WTxXii8Xp0XT81t2ksI9Mkvj/saTKVdyH18TbQ+MMCtXtx6KiDT0/qxtaWjI5a8Z0nhtyjkRESpcREQEREBERAREQEREBETrY3QCcE4BOB3PsPeB5avVrpADdnDMqDCsxyzBRsoOBk7nsO5njVozaVfiIR7K2c1sqkdCnIHcn4ujYn6xw9Db+M/iqblQ+FYR+DgZ6cDYNvvudx7TNnfQSI8+8MGK9XT1I2nYG16yVsNJ2c5HzdOz4OR8JGN5Lp1sQWAiwZBGCD2I8xO1tqdo2jcaU9q+aENjabnbTrb0HC6iodNnScFX9wVwdj59pseBcIFFq6vk3ULqFX56mIW3pPzKc43x6gbgTB505WNbCmv51B+6N/bV5y2mJ/tE/c9VJErym99KwbTsyOvYqSGU/Ubib6Vi1fjP/Hl3vNL/ADj9/b6hrfxADgjIzg9x9feckZ7yrvs75q13Fy9Rau1qgGxYCrMuQNnXO4PqpznvJseZEp+HiCtRachVuwqO3kBYMof1z7TFfHNZ09HHmreu1efaVVptPqFThqBHUHxgowuThk27ZwSTj1EiBm355+8rqLL+I0Mi2EdLZBrwFCrhhsdgJFrNWzdtp6WKNUh5GafnMs624VD4jL95UvGp0emdBgNTWcenwCfN9C+M6h9+plB/NgJ9Q1VrplC1gKiDAHYKANh7DEz+ZPUQ1eBHcyjX2jcxPy3pPE0gHiWMK0J7ISrMWx54Cn88ShtDpX4tcqKSXtbdic4ycu5PoBlifYyx+cOY6+N1WXakdNWmtZNMmQTqbwCDY2P4Sg5wO+e/lMHkrlZrmNVoIttAOoPnp6Cc+F7W2Dy8l+s7hj8dJmfbmfeXJER6T3kDQBEfUVghbAldIPcUVgrWfbqJZ/6hJZOlVYpULUMKoAAHYADAE7zFa3KdvRpXjXRERIpEREBERAREQEREBERATB4gFtepLBZu3WCmQoKfEA5HZT6eeJnTw1dLXdPg2FOllY4APWAd0OR2PqN4ge8TDr1rEKbabFLOUx8J6QCcWEhsBCBn13G04Nt1obwkVCtgALnIesEZcdJ2JGcA+m87oZsw9RrwviLpF8S2oAmsEA77qMnYbbzrbw0akWLrmaxLCpCNgLWAB8I6QCRkZ3J7+kzoGs4hwocVWxOInNThehQMNUwyesODnqzgg+WJV3OPKjI2dcQlpPwag7Uan0Fp/hX+/wArH0lyTpdUt6lb1DK2xBGQR6ESePLNJU5cNckalQHLHEreTNap4gpQH4bVYd6yfmHqAcHI2OJtPtY4s2t1QqBBqrUPWR2IdFJPowyDv7mT7inJCuvTw0r4XfwLgXpB/wCRs+JT/Sce0h3E+S3rXptq1NajOBURqaR69I+G1f0M11y0taLfbFbDkrSafSF8J4/qeEDGgtZUPdDhq29QVYETKs4jpOJf+Yac02H+JpvlJ9WqY4/wkTKs5SC/LqkHtbVfWf0NZnWvlIN82qrP/TrvsP6CuXTantmiuSOtf6Yen4c+jsS7hjV6lamV8Jnq2II66zh17eWR7zccd5y1nOQGm01eFY5NdWSz/wB5j+7+g9ZncJ5FLMGpp1NhHY2Y01Y99y1v6ASc6Lk09JHEWUhm6mqq6kRth8LPk2Wds/EfylV8tInc9r8WHJMajqED5R5TZn/4LpsvB3u+bT6T6H+NePID4RLe4Nwqvg9Yr0ue5LMxy9jHdnY+ZJmTpaV06hdOoRV2CgABfbA2nrMmTLN2/DhrjgiIlS4iIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiIHBGe8AY7TmICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiIH//Z alt="Logo">
+      <strong>Level</strong>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-uppercase">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HOME ================= -->
+<section id="home" class="hero-section">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Discover Your Next Adventure</h1>
+    <p class="lead mt-3">Travel smarter. Travel better. Travel with Level.</p>
+    <a href="#portfolio" class="btn btn-primary btn-lg mt-4">Explore Now</a>
+  </div>
+</section>
+
+<!-- ================= PORTFOLIO ================= -->
+<section id="portfolio" class="bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Destinations</h2>
+      <p class="text-muted">Hand-picked travel experiences</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="img-box">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
         </div>
-    </header>
+        <h5 class="mt-3 text-center">Mountain Escape</h5>
+      </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">DCA Travels</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#flights">Flights</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hotels">Hotels</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#transport">Transport</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#meals">Meals</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="col-md-4">
+        <div class="img-box">
+          <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98">
         </div>
-    </nav>
+        <h5 class="mt-3 text-center">Beach Paradise</h5>
+      </div>
 
-    <main class="container my-5">
+      <div class="col-md-4">
+        <div class="img-box">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+        </div>
+        <h5 class="mt-3 text-center">City Adventures</h5>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section id="flights" class="py-5">
-            <h2 class="text-center mb-4">✈️ Flight Details</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Economy Class</h5>
-                            <p class="card-text">Best fares for comfortable travel. Luggage allowance included.</p>
-                            <a href="#" class="btn btn-primary">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Business Class</h5>
-                            <p class="card-text">Priority boarding, extra legroom, and premium in-flight services.</p>
-                            <a href="#" class="btn btn-primary">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- ================= BLOG ================= -->
+<section id="blog">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Latest Blog</h2>
+      <p class="text-muted">Travel stories & guides</p>
+    </div>
 
-        <hr>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card blog-card">
+          <div class="img-box">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Top Travel Tips</h5>
+            <p class="card-text">Smart planning for perfect trips.</p>
+            <a href="#" class="btn btn-sm btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
 
-        <section id="hotels" class="py-5 bg-light">
-            <h2 class="text-center mb-4">🏨 Hotels & Accommodations</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src= https://r1imghtlak.ibcdn.com/aeb91a86afa211ee8c5f0a58a9feac02.jpg?downsize=245:152&output-format=webp class="card-img-top" alt="Luxury Hotel">
-                        <div class="card-body">
-                            <h5 class="card-title">Luxury Resorts</h5>
-                            <p class="card-text">5-star properties with top-notch amenities and service.</p>
-                            <span class="badge bg-success">All-inclusive options available</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src=https://cdn1.goibibo.com/voy_ing/t_g/New_dWeb_Homepage_Maldives-1581454743.jpg?im=Resize=(258,145) class="card-img-top" alt="Boutique Hotel">
-                        <div class="card-body">
-                            <h5 class="card-title">Boutique Stays</h5>
-                            <p class="card-text">Unique and stylish hotels for a personalized experience.</p>
-                            <span class="badge bg-warning text-dark">Breakfast included</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src=https://cdn1.goibibo.com/voy_ing/t_g/New_dWeb_Homepage_Krabi-1581455438.jpg?im=Resize=(258,145) class="card-img-top" alt="Budget Hotel">
-                        <div class="card-body">
-                            <h5 class="card-title">Budget-Friendly Hotels</h5>
-                            <p class="card-text">Clean and comfortable rooms at affordable prices.</p>
-                            <span class="badge bg-info">Best for backpackers</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div class="col-md-4">
+        <div class="card blog-card">
+          <div class="img-box">
+            <img src="https://images.pexels.com/photos/34506371/pexels-photo-34506371.jpeg">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Best Beaches</h5>
+            <p class="card-text">Crystal clear waters & sunshine.</p>
+            <a href="#" class="btn btn-sm btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
 
-        <hr>
+      <div class="col-md-4">
+        <div class="card blog-card">
+          <div class="img-box">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Budget Travel</h5>
+            <p class="card-text">Explore more, spend less.</p>
+            <a href="#" class="btn btn-sm btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section id="transport" class="py-5">
-            <h2 class="text-center mb-4">🚗 Ground Transportation</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Private Taxis</h5>
-                            <p class="card-text">Dedicated vehicle for your trip. Punctual airport transfers.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Airport transfers</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Local city tours</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Shared Taxis & Buses</h5>
-                            <p class="card-text">Cost-effective options for group travel and sightseeing.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Inter-city buses</li>
-                                <li><i class="fas fa-check-circle text-success me-2"></i>Shared shuttle service</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Contact Us</h2>
+      <p class="text-muted">We’d love to hear from you</p>
+    </div>
 
-        <hr>
+    <div class="row g-4 align-items-stretch">
 
-        <section id="meals" class="py-5 bg-light">
-            <h2 class="text-center mb-4">🍽️ Meals Included</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">All-Inclusive Packages</h5>
-                            <p class="card-text">Enjoy breakfast, lunch, and dinner at your hotel's restaurant.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Meal Plan Options</h5>
-                            <p class="card-text">Choose between Breakfast only (B&B) or Half-Board (Breakfast & Dinner).</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- MAP -->
+      <div class="col-md-6">
+        <div class="h-100 rounded overflow-hidden shadow-sm">
+          <iframe
+            src="https://www.google.com/maps?q=New%20Delhi%20India&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0; min-height: 420px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
 
-        <hr>
+      <!-- CONTACT FORM -->
+      <div class="col-md-6">
+        <div class="bg-white p-4 h-100 rounded shadow-sm">
+          <form>
+            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+            <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+            <textarea class="form-control mb-3" rows="5" placeholder="Message" required></textarea>
+            <button class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
 
-        <section id="contact" class="py-5">
-            <h2 class="text-center mb-4">📧 Contact Us</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="Your message..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+    </div>
+  </div>
+</section>
 
-    </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 DCA Travel Agency. All rights reserved.</p>
-    </footer>
+<!-- ================= FOOTER ================= -->
+<footer class="text-center">
+  <p class="mb-0">© <span id="year"></span> Level Travel. All Rights Reserved.</p>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

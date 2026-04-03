@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>One Page ScrollSpy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <style>
+    body {
+      position: relative;
+
+    }
+
+    .navbar {
+      height: 90px;
+    }
+    section {
+  scroll-margin-top: 100px; /* navbar height */
+}
+
+
+    .navbar-nav .nav-link {
+      padding: 35px 30px;
+      border-left: 1px solid #ddd;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .navbar-nav .nav-link.active {
+      background-color: #f24d59;
+      color: #fff !important;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #f24d59;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+ /*booking section*/
+    .booking-section {
+      min-height: 100vh;
+      background: url("C:/Users/lenovo/OneDrive/Desktop/travel/img/bg-img-1.jpg") center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    /* Booking box */
+    .booking-box {
+      background: #fff;
+      padding: 30px;
+      max-width: 1100px;
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .form-control,
+    .form-select {
+      height: 55px;
+    }
+
+    .btn-book {
+      height: 55px;
+      background: #f24d59;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-book:hover {
+      background: #e43b46;
+    }
+
+    .icon {
+      color: #f24d59;
+      font-size: 20px;
+      margin-right: 8px;
+    }
+
+    /* icon section */
+
+    .help-section {
+  background: #f24f57;
+  position: relative;
+}
+
+.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: white;
+  clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
+}
+
+.features {
+  background: #fff;
+}
+
+.feature-icon {
+  font-size: 48px;
+  color: #f24f57;
+}
+
+.feature-box {
+  padding: 30px 20px;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon animation */
+.feature-icon {
+  font-size: 48px;
+  color: #f24f57;
+  transition: all 0.4s ease;
+}
+
+.feature-box:hover .feature-icon {
+  transform: rotate(-10deg) scale(1.15);
+}
+
+/* Heading hover color */
+.feature-box h5 {
+  color: #f24f57;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.feature-box:hover h5 {
+  color: #d93c43;
+}
+
+/* Read more hover */
+.read-more {
+  color: #f24f57;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: letter-spacing 0.3s ease;
+}
+
+.feature-box:hover .read-more {
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+/* portfolio section */
+
+.portfolio-card {
+  background: #fff;
+  transition: 0.4s;
+}
+
+.portfolio-card img {
+  width: 100%;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.portfolio-card h6 {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.portfolio-card p {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Recommended */
+.recommended-header {
+  background: #f24f57;
+  color: #fff;
+  padding: 20px;
+}
+
+.recommended-header p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.rec-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.rec-item img {
+  width: 70px;
+  margin-right: 15px;
+}
+
+.rec-item span {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.rec-item:hover {
+  background: #f5f5f5;
+  transform: translateX(5px);
+}
+
+/* Carousel dots */
+.carousel-indicators button {
+  background-color: #f24f57;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  
+}
+
+
+/* video section */
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark overlay */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Center button */
+.video-control {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.video-control button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 26px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.video-control button:hover {
+  background: #f24f57;
+  color: #fff;
+}
+
+/* image section */
+.asia-section {
+  min-height: 600px;
+  background: url("C:/Users/lenovo/OneDrive/Desktop/travel/img/bg-img-2.jpg")
+    no-repeat center / cover;
+}
+
+
+.asia-title {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.asia-subtitle {
+  color: #e63946;
+  font-weight: 600;
+}
+
+.content-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 4px;
+    margin-left: -10px;
+
+}
+
+.content-box img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.content-box p {
+  font-size: 14px;
+  color: #777;
+}
+
+.read-more {
+  color: #e63946;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+
+
+/* footer section */
+
+.contact-footer {
+  position: relative;
+  padding: 160px 0 0; /* extra space for shape */
+  background: 
+    url("C:/Users/lenovo/OneDrive/Desktop/travel/img/bg-img-3.jpg")
+    center / cover no-repeat;
+  overflow: hidden;
+
+  /* IMAGE SHAPE */
+  clip-path: polygon(
+    0 0,
+    50% 80px,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+
+
+
+/* MAP */
+.map-box {
+  height: 360px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* FORM */
+.contact-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 4px;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  background: #1c3444;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-bottom span {
+  color: #f04e53;
+}
+
+
+
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100" tabindex="0">
+
+<!-- Navbar -->
+<nav id="mainNavbar"
+     class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
+  <div class="container-fluid px-5">
+
+    <!-- Logo -->
+                                <a class="navbar-brand mr-auto" href="#">
+                                <img src="C:\Users\lenovo\OneDrive\Desktop\travel\img\logo.png" alt="Site logo">
+                                Level
+                               </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-uppercase">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#blog">Blog Entries</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<section id="home"  class="booking-section">
+  <div class="booking-box">
+
+    <!-- Row 1 -->
+    <div class="row g-3 mb-3">
+      <div class="col-md-4">
+        <div class="input-group">
+          <span class="input-group-text bg-white">
+            <i class="bi bi-geo-alt-fill icon"></i>
+          </span>
+          <input type="text" class="form-control" placeholder="Type your destination...">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="input-group">
+          <span class="input-group-text bg-white">
+            <i class="bi bi-calendar-event icon"></i>
+          </span>
+          <input type="date" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="input-group">
+          <span class="input-group-text bg-white">
+            <i class="bi bi-calendar-check icon"></i>
+          </span>
+          <input type="date" class="form-control">
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row g-3 align-items-center">
+      <div class="col-md-3">
+        <select class="form-select">
+          <option>Adult</option>
+          <option>1</option>
+          <option>2</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <select class="form-select">
+          <option>Children</option>
+          <option>0</option>
+          <option>1</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <select class="form-select">
+          <option>Room</option>
+          <option>1</option>
+          <option>2</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 d-grid">
+        <button class="btn btn-book">CHECK AVAILABILITY</button>
+      </div>
+    </div>
+
+    <!-- Bottom Text -->
+    <div class="row mt-3">
+      <div class="col-md-8 text-muted">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </div>
+      <div class="col-md-4 text-md-end text-danger fw-semibold">
+        Need Help?
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<section class="help-section text-center text-white">
+  <div class="container py-5">
+    <h1 class="fw-bold">We are here to help you?</h1>
+    <p class="mb-4">Subscribe to get our newsletters</p>
+    <button class="btn btn-outline-light px-4 py-2">
+      SUBSCRIBE NEWSLETTERS
+    </button>
+  </div>
+
+  <!-- wave shape -->
+  <div class="wave"></div>
+</section>
+
+<section   id="portfolio" class="features py-5">
+  <div class="container">
+    <div class="row text-center g-4">
+      
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="bi bi-hammer feature-icon"></i>
+          <h5 class="mt-3">Level HTML Template by Toolplate website</h5>
+          <p>
+            You are allowed to download, edit and use this template
+            for your business or client websites.
+          </p>
+          <a href="#" class="read-more">CONTINUE READING...</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="bi bi-airplane feature-icon"></i>
+          <h5 class="mt-3">Original Website Template Producer</h5>
+          <p>
+            You are NOT allowed to re-distribute the downloadable
+            template ZIP file on any website.
+          </p>
+          <a href="#" class="read-more">CONTINUE READING...</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="bi bi-life-preserver feature-icon"></i>
+          <h5 class="mt-3">Contact us if you have any question</h5>
+          <p>
+            If you see this template being distributed on any other
+            site, that is an illegal copy.
+          </p>
+          <a href="#" class="read-more">CONTINUE READING...</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- LEFT: SLIDER -->
+      <div class="col-lg-8">
+        <div id="portfolioSlider" class="carousel slide" data-bs-ride="carousel">
+          
+          <!-- Slides -->
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="portfolio-card">
+                    <img src="https://picsum.photos/600/400?1" class="img-fluid" alt="">
+                    <div class="p-4">
+                      <h6>NUNC IN FELIS ALIQUET METUS LUCTUS IACULIS</h6>
+                      <p>
+                        Aliquam ac lacus volutpat, dictum risus at,
+                        scelerisque nulla. Nullam sollicitudin.
+                      </p>
+                      <a href="#" class="btn btn-danger btn-sm w-100">GET MORE INFO.</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="portfolio-card">
+                    <img src="https://picsum.photos/600/400?2" class="img-fluid" alt="">
+                    <div class="p-4">
+                      <h6>SED CURSUS DICTUM NUNC QUIS MOLESTIE</h6>
+                      <p>
+                        Pellentesque quis dui sit amet purus scelerisque
+                        eleifend sed ut eros.
+                      </p>
+                      <a href="#" class="btn btn-danger btn-sm w-100">VIEW DETAIL</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- You can duplicate carousel-item for more slides -->
+            <div class="carousel-item">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="portfolio-card">
+                    <img src="https://picsum.photos/600/400?3" class="img-fluid" alt="">
+                    <div class="p-4">
+                      <h6>PORTFOLIO ITEM TITLE</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur.</p>
+                      <a href="#" class="btn btn-danger btn-sm w-100">GET MORE INFO.</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="portfolio-card">
+                    <img src="https://picsum.photos/600/400?4" class="img-fluid" alt="">
+                    <div class="p-4">
+                      <h6>ANOTHER PROJECT</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur.</p>
+                      <a href="#" class="btn btn-danger btn-sm w-100">VIEW DETAIL</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Indicators -->
+          <div class="carousel-indicators mt-4 position-relative">
+            <button type="button" data-bs-target="#portfolioSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#portfolioSlider" data-bs-slide-to="1"></button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: RECOMMENDED -->
+      <div class="col-lg-4">
+        <div class="recommended">
+          <div class="recommended-header">
+            <h5>Recommended Places</h5>
+            <p>Enamel pin cliche tilde, kitsch and VHS thundercats</p>
+          </div>
+
+          <ul class="list-unstyled m-0">
+            <li class="rec-item">
+              <img src="https://picsum.photos/80/60?5" alt="">
+              <span>EUROPE</span>
+            </li>
+            <li class="rec-item">
+              <img src="https://picsum.photos/80/60?6" alt="">
+              <span>ASIA</span>
+            </li>
+            <li class="rec-item">
+              <img src="https://picsum.photos/80/60?7" alt="">
+              <span>AFRICA</span>
+            </li>
+            <li class="rec-item">
+              <img src="https://picsum.photos/80/60?8" alt="">
+              <span>SOUTH AMERICA</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="video-section">
+  <video id="bgVideo" autoplay muted loop playsinline>
+    <source src="C:\Users\lenovo\OneDrive\Desktop\travel\videos\video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Overlay -->
+  <div class="video-overlay"></div>
+
+  <!-- Play / Pause Button -->
+  <div class="video-control">
+    <button id="videoBtn">
+      <span id="videoIcon">❚❚</span>
+    </button>
+  </div>
+</section>
+
+<script>
+  const video = document.getElementById("bgVideo");
+  const btn = document.getElementById("videoBtn");
+  const icon = document.getElementById("videoIcon");
+
+  btn.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      icon.textContent = "❚❚";
+    } else {
+      video.pause();
+      icon.textContent = "▶";
+    }
+  });
+</script>
+
+
+<section  id="blog" class="asia-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT TEXT -->
+      <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start">
+        <h2 class="asia-title">ASIA</h2>
+        <h5 class="asia-subtitle">Singapore</h5>
+      </div>
+
+      <!-- RIGHT CONTENT BOX -->
+      <div class="col-lg-6">
+        <div class="content-box shadow">
+
+          <!-- ITEM 1 -->
+          <div class="row mb-4">
+            <div class="col-md-5">
+              <img src="C:\Users\lenovo\OneDrive\Desktop\travel\img\img-03.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-7">
+              <h6 class="text-danger fw-bold">
+                Suspendisse vel est libero sem phasellus ac laoreet
+              </h6>
+              <p>
+                Vivamus eget tellus ornare, sollicitudin quam id, dictum nulla.
+                Phasellus finibus rhoncus justo.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="row mb-4">
+            <div class="col-md-5">
+              <img src="C:\Users\lenovo\OneDrive\Desktop\travel\img\img-05.jpg"class="img-fluid" alt="">
+            </div>
+            <div class="col-md-7">
+              <h6 class="fw-bold">
+                Suspendisse vel est libero sem phasellus ac laoreet
+              </h6>
+              <p>
+                Duis accumsan sagittis tortor in ultrices.
+              </p>
+              <a href="#" class="read-more">CONTINUE READING...</a>
+            </div>
+          </div>
+
+          <!-- ITEM 3 -->
+          <div class="row">
+            <div class="col-md-5">
+              <img src="C:\Users\lenovo\OneDrive\Desktop\travel\img\img-01.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-7">
+              <h6 class="fw-bold">
+                Faucibus dolor ligula nisl metus auctor aliquet
+              </h6>
+              <p>
+                Nunc in felis aliquet metus luctus iaculis.
+              </p>
+              <a href="#" class="read-more">CONTINUE READING...</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section  id="contact" class="contact-footer">
+
+  <div class="container position-relative">
+    <div class="row g-4 align-items-center">
+
+      <!-- MAP -->
+      <div class="col-lg-6">
+        <div class="map-box shadow">
+          <iframe
+            src="https://www.google.com/maps?q=Singapore&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="col-lg-6">
+        <div class="contact-box shadow">
+          <form>
+            <input type="text" class="form-control mb-3" placeholder="Name">
+            <input type="email" class="form-control mb-3" placeholder="Email">
+            <input type="text" class="form-control mb-3" placeholder="Subject">
+            <textarea class="form-control mb-4" rows="5" placeholder="Message"></textarea>
+            <button class="btn btn-danger w-100">SEND MESSAGE NOW</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom text-center py-3 mt-5">
+    Copyright © 2026 Your Company – Design:
+    <span>Tooplate</span>
+  </div>
+</section>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,67 @@
+.footer {
+  background: #0f172a;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-brand-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #0d9488, #0f766e);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-brand-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #2dd4bf;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.footer-social-link {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-social-link:hover {
+  background: #0d9488;
+  color: white;
+}
