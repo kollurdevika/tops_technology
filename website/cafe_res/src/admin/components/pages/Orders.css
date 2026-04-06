@@ -1,0 +1,12 @@
+.table th {
+  background: #212529 !important;
+  color: white !important;
+}
+
+.badge {
+  font-size: 14px;
+}
+
+.btn-group .dropdown-menu {
+  min-width: 120px;
+}

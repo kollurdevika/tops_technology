@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.hero-header {
+  background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)), 
+              url("/img/bg-hero.jpg") center center/cover no-repeat;
+                animation: rotateImg 30s linear infinite;
+
+}
+
+@keyframes rotateImg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+video {
+  max-width: 100% !important;
+  display: block !important;
+  background: #000;
+}
+
+/* Dark Mode Background */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+/* Cards in Dark Mode */
+.dark-mode .card {
+  background-color: #1e1e1e !important;
+  color: white;
+  border: 1px solid #333;
+}
+
+/* Form Inputs in Dark Mode */
+.dark-mode .form-control {
+  background-color: #2a2a2a;
+  color: white;
+  border-color: #444;
+}
+
+/* Labels */
+.dark-mode label {
+  color: #ddd;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.badge {
+  font-size: 0.85rem;
+  border-radius: 20px;
+}
