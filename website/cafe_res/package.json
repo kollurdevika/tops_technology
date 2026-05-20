@@ -10,6 +10,7 @@
     "axios": "^1.13.2",
     "bootstrap": "^5.3.8",
     "chart.js": "^4.5.1",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.1",
     "react-bootstrap": "^2.10.10",
     "react-chartjs-2": "^5.3.1",
@@ -27,7 +28,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "json-server --watch db.json --port 3000"
+    "serve": "json-server --watch db.json --port 3000",
+    "homepage": "https://kollurdevika.github.io/tops_technology",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
