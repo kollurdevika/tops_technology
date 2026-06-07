@@ -7,11 +7,7 @@ router.get('/', async (req, res) => {
   try {
     let settings = await Settings.findOne();
     if (!settings) {
-      settings = await Settings.create({
-        email: '',
-        phone: '',
-        location: '',
-      });
+      settings = await Settings.create({});
     }
     // Return with address mapped to location for backward compatibility
     res.json({
