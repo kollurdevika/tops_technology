@@ -1,4 +1,5 @@
-restro_web.zip
-
-# Local Netlify folder
-.netlify
+node_modules/
+.next/
+dist/
+build/
+.env
