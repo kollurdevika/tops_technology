@@ -15,7 +15,7 @@ export default function AdminDashboard() {
   // Fetch admin contact details
   const fetchAdminContact = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/adminContact');
+      const res = await fetch('https://yoddhatrader.onrender.com/api/adminContact');
       const data = await res.json();
       setAdminContact(data);
     } catch (e) {
@@ -23,28 +23,28 @@ export default function AdminDashboard() {
     }
   };
   const fetchContacts = async () => {
-    const res = await fetch('http://localhost:5000/api/contacts');
+    const res = await fetch('https://yoddhatrader.onrender.com/api/contacts');
     const data = await res.json();
     setContacts(data);
   };
 
   // Fetch services
   const fetchServices = async () => {
-    const res = await fetch('http://localhost:5000/api/services');
+    const res = await fetch('https://yoddhatrader.onrender.com/api/services');
     const data = await res.json();
     setServices(Array.isArray(data) ? data : []);
   };
 
   // Fetch social links
   const fetchSocial = async () => {
-    const res = await fetch('http://localhost:5000/api/social');
+    const res = await fetch('https://yoddhatrader.onrender.com/api/social');
     const data = await res.json();
     setSocialLinks(Array.isArray(data) ? data : []);
   };
   // Save admin contact details
   const saveAdminContact = async (e) => {
     e.preventDefault();
-    await fetch('http://localhost:5000/api/adminContact', {
+    await fetch('https://yoddhatrader.onrender.com/api/adminContact', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(adminContact),
@@ -62,13 +62,13 @@ export default function AdminDashboard() {
   }, []);
 
   const deleteContact = async (id) => {
-    await fetch(`http://localhost:5000/api/contacts/${id}`, { method: 'DELETE' });
+    await fetch(`https://yoddhatrader.onrender.com/api/contacts/${id}`, { method: 'DELETE' });
     fetchContacts();
   };
 
   const sendReply = async (e) => {
     e.preventDefault();
-    await fetch(`http://localhost:5000/api/contacts/${replyId}/reply`, {
+    await fetch(`https://yoddhatrader.onrender.com/api/contacts/${replyId}/reply`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ replyMessage })
@@ -80,7 +80,7 @@ export default function AdminDashboard() {
 
   const addOrUpdateSocial = async (e) => {
     e.preventDefault();
-    await fetch('http://localhost:5000/api/social', {
+    await fetch('https://yoddhatrader.onrender.com/api/social', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newSocial)
@@ -90,14 +90,14 @@ export default function AdminDashboard() {
   };
 
   const deleteSocial = async (id) => {
-    await fetch(`http://localhost:5000/api/social/${id}`, { method: 'DELETE' });
+    await fetch(`https://yoddhatrader.onrender.com/api/social/${id}`, { method: 'DELETE' });
     fetchSocial();
   };
 
   const addOrUpdateService = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/services', {
+      const res = await fetch('https://yoddhatrader.onrender.com/api/services', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newService)
@@ -115,7 +115,7 @@ export default function AdminDashboard() {
   };
 
   const deleteService = async (id) => {
-    await fetch(`http://localhost:5000/api/services/${id}`, { method: 'DELETE' });
+    await fetch(`https://yoddhatrader.onrender.com/api/services/${id}`, { method: 'DELETE' });
     fetchServices();
   };
 

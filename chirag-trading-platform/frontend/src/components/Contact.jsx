@@ -14,7 +14,7 @@ export default function Contact() {
   });
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/adminContact')
+    axios.get('https://yoddhatrader.onrender.com/api/adminContact')
       .then(res => {
         if (res.data) setContactInfo(res.data);
       })
@@ -25,7 +25,7 @@ export default function Contact() {
     e.preventDefault();
     setStatus('Sending...');
     try {
-      await axios.post('http://localhost:5000/api/contacts', formData);
+      await axios.post('https://yoddhatrader.onrender.com/api/contacts', formData);
       setStatus('Message Sent Successfully!');
       setFormData({ name: '', email: '', phone: '', message: '' });
       setTimeout(() => setStatus(''), 5000);
